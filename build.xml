@@ -1,0 +1,50 @@
+<project name="Divami Blog" default="deploy" basedir=".">
+    <description>
+            Zipping and uploading to server
+    </description>	
+	
+	 <tstamp>
+            <format property="bld_timestamp" pattern="yyyyMMddhhmm"/>
+    </tstamp>
+	
+	<property name="sitedeploy.dir" value="divamiblogmin"/>
+
+	
+	
+	
+	
+	
+	<target name="copyFiles">
+		<echo>Copying required files</echo>
+		<mkdir dir="${sitedeploy.dir}"/>
+		<copy todir="${sitedeploy.dir}">
+  			<fileset dir="." excludes="**/.git/ **/build.xml **divamiblogmin/ **divamiblogmin* **/divamiblogmin.*/"/>
+		</copy>
+	</target>
+	<target name="buildTarFile">
+		<echo message="Preparing deployment file ${sitedeploy.dir}${bld_timestamp}.tar.gz"/>
+	    <exec dir="."
+	      executable="tar"
+	      failonerror="true">
+	      <arg line="-czf ${sitedeploy.dir}.${bld_timestamp}.tar.gz ${sitedeploy.dir}"/>
+	    </exec>
+		<delete dir="${sitedeploy.dir}"/>
+	</target>
+	
+	<target name="upload" description="build and upload package">
+		<echo message="Uploading deployment file ${sitedeploy.dir}.${bld_timestamp}.tar.gz to remote host (root@newsite.divami.com)"/>
+		<exec dir="."
+			executable="scp"
+			failonerror="true">
+			<arg line="${sitedeploy.dir}.${bld_timestamp}.tar.gz root@newsite.divami.com:/blogbuild/"/>
+    	</exec>
+  </target>
+	
+	<target name="build" description="It will create package"
+    	depends="copyFiles, buildTarFile"> 
+    </target>
+	
+	<target name="deploy" depends="build, upload" description="It will create package and uploade to remote host"/> 
+
+</project>
+
