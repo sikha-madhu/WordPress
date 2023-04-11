@@ -16,6 +16,9 @@
 <link href="https://divami.com/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
 <link href="https://divami.com/assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="stylesheet" type="text/css"
+        href="<?php echo get_template_directory_uri(); ?>/css/main.css"
+            />
 <?php wp_head(); ?>
 
 	<!-- preloading links -->

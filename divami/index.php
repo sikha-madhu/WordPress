@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The template for displaying home page.
@@ -9,7 +10,6 @@
  *
  * @package divami
  */
-
 get_header();
 add_back_to_top(); 
 ?>
