@@ -6,3 +6,346 @@
   background-color: black;
 }
 
+// introduction page
+
+.para{
+  color: red;
+}
+
+.introduction_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  background:linear-gradient(135.61deg, #EAEDF3 13.77%, #FAFCFF 72.12%);
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 1280px;
+    overflow: hidden;
+    @include minMaxWidth(770, 1024) {
+        min-height: 1022px;
+      }
+      @include minMaxWidth(650, 770) {
+        min-height: 940px;
+      }
+      @include minMaxWidth(300,650){
+        min-height: 863px;
+      }
+  }
+
+  .introduction {
+    
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 1280px;
+    // margin-top: 60px;
+    background: linear-gradient(
+      121.62deg,
+      #eaedf3 30.2%,
+      rgba(250, 252, 255, 0) 68.08%
+    );
+    @include minMaxWidth(770, 1024) {
+        min-height: 1022px;
+      }
+      @include minMaxWidth(650, 770) {
+        min-height: 940px;
+      }
+      @include minMaxWidth(300,650){
+       background: none;
+       min-height: 863px;
+      }
+  }
+  .introductionTittle {
+    font-family:$GraphikNormal;
+    font-size: 64px;
+    line-height: 70px;
+    font-weight: 300;
+    padding-left: 70px;
+    padding-top: 140px;
+    margin-bottom: 25px;
+    @include minMaxWidth(770, 1024) {
+        font-size: 56px;
+      }
+      @include minMaxWidth(650, 770) {
+        font-size: 48px;
+      }
+      @include minMaxWidth(400,500){
+        line-height: 50px;
+        width:260px;
+        height:60px;
+        font-size: 40px;
+        padding-top: 89px;
+        padding-left:30px ;
+      }
+      @include minMaxWidth(500,650){
+        padding-left: 70px;
+        line-height: 50px;
+        width:260px;
+        height:60px;
+        font-size: 40px;
+        padding-top: 89px;
+
+      }
+      @include minMaxWidth(300,400){
+        line-height: 50px;
+        width:242px;
+        height:46px;
+        font-size: 32px;
+        padding-top: 89px;
+        padding-left:20px ;
+      }
+  }
+  .introductionConent {
+    font-family:$GraphikNormal;
+    width: 482px;
+    height: 190px;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+    padding-left: 70px;
+    letter-spacing: 0.4px;
+    @include minMaxWidth(770, 1024) {
+        font-size: 18px;
+      }
+      @include minMaxWidth(650, 770) {
+        font-size: 16px;
+      }
+      @include minMaxWidth(400,500){
+        width:320px;
+        height:166px;
+        font-size: 14px;
+        padding-left: 30px;
+        line-height: 26px;
+      }
+      @include minMaxWidth(500,650){
+        padding-left: 70px;
+        width: 405px;
+        font-size: 16px;
+
+        
+      }
+      @include minMaxWidth(300,400){
+        width:319px;
+        height:156px;
+        font-size: 14px;
+        padding-left: 20px;
+        line-height: 26px;
+      }
+  }
+  .img1 {
+    position: absolute;
+    top: 14%;
+    left: 9%;
+    width: 957px;
+    @include minMaxWidth(1024, 1230) {
+      width: 890px;
+      top: 14%;
+      left: 7%;
+    }
+    @include minMaxWidth(770, 1024) {
+        width: 795px;
+        top: 20%;
+        left: 1%;
+      }
+      @include minMaxWidth(650, 770) {
+        width: 691px;
+        top: 16%;
+        left: -8%;
+      }
+      @include minMaxWidth(300,650){
+        display: none;
+      }
+
+  }
+  .img1_1{
+    // width:900px;
+    position: absolute;
+    top:60%;
+    left:16%;
+    width: 413px;
+    
+    @include minMaxWidth(650,1466){
+      display: none;
+    }
+    @include minMaxWidth(500,650){
+      width:484px;
+      top:66%;
+      left:38%;
+    }
+    @include minMaxWidth(400,500){
+      width: 450px;
+      top:60%;
+    left:30%;
+    }
+  }
+  .img1_2{
+    width:312px;
+    position: absolute;
+    z-index: 1;
+    top:69%;
+    left:14%;
+    @include minMaxWidth(400,500){
+      width:316px;
+      top:73%;
+      left:14%;
+    }
+    @include minMaxWidth(500,650){
+      top:78%;
+      left:40%;
+    }
+    @include minMaxWidth(650,1466){
+      
+      display: none;
+    }
+  }
+  .img2 {
+    position: absolute;
+    top: 33%;
+    left: 55%;
+    // width: 298px;
+    width: 1061px;
+    @include minMaxWidth(1024, 1230) {
+      width: 948px;
+      top: 32%;
+      left: 60%;
+    }
+    @include minMaxWidth(770, 1024) {
+        width: 850px;
+        top: 36%;
+        left: 62%;
+      }
+      @include minMaxWidth(650, 770) {
+        width: 628px;
+        top: 34%;
+        left: 67%;
+      }
+      @include minMaxWidth(400, 500) {
+        width: 348px;
+        top: 38%;
+        left: 45%;
+      }
+      @include minMaxWidth(500,650){
+      width: 392px;
+      top:40%;
+      left:52%;
+      }
+      @include minMaxWidth(360,400) {
+        width: 328px;
+        top: 36%;
+        left: 37%;
+      }
+      @include minMaxWidth(300,360){
+        width: 328px;
+        top: 36%;
+        left: 37%;
+      }
+  }
+  .img3 {
+    position: absolute;
+    width: 678px;
+    top: 11%;
+    left: 60%;
+    animation: image 1s ease-in forwards;
+    @include minMaxWidth(1024, 1230) {
+      width: 590px;
+      top: 13%;
+      left: 67%;
+    }
+    @include minMaxWidth(770, 1024) {
+        width: 493px;
+        top: 14%;
+        left: 61%;
+      }
+      @include minMaxWidth(650, 770) {
+        width: 422px;
+        top: 11%;
+        left: 62%;
+      }
+      @include minMaxWidth(300,650){
+        display: none;
+      }
+  }
+  .img4 {
+    position: absolute;
+    width: 1224px;
+    top: 45%;
+    left: 3%;
+    animation: image 1s ease-in forwards;
+    @include minMaxWidth(1024, 1230) {
+      width: 1100px;
+      top: 45%;
+      left: 3%;
+    }
+    @include minMaxWidth(770, 1024) {
+        width: 953px;
+        top: 48%;
+        left: 3%;
+      }
+      @include minMaxWidth(650, 770) {
+        width: 772px;
+        top: 44%;
+        left: 3%;
+      }
+      @include minMaxWidth(500,650){
+        width: 495px;
+        top:47%;
+        left:-7%;
+        }
+      @include minMaxWidth(400,500) {
+        width: 430px;
+        top: 45%;
+        left: -16%;
+      }
+    
+      @include minMaxWidth(360,400) {
+        width: 423px;
+        top: 43%;
+        left: -20%;
+      }
+      @include minMaxWidth(300,360){
+        width: 423px;
+        top: 43%;
+        left: -20%;
+      }
+  }
+  .img5 {
+    position: absolute;
+    top: 75%;
+    left: 72%;
+    width: 569px;
+    @include minMaxWidth(1024, 1230) {
+      width: 520px;
+      top: 71%;
+      left: 70%;
+    }
+    @include minMaxWidth(770, 1024) {
+        width: 460px;
+        top: 79%;
+        left: 77%;
+      }
+      @include minMaxWidth(650, 770) {
+        width: 388px;
+        top: 70%;
+        left: 78%;
+      }
+      @include minMaxWidth(300,650){
+        display: none;
+      }
+}
+
+    @keyframes image {
+      0% {
+        transform: translatey(-10px);
+      }
+      100% {
+        transform: translatey(10px);
+      }
+    }
+  
+}
