@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '../styles/sass/_common.scss' ?>">
 
 <?php
 /**
