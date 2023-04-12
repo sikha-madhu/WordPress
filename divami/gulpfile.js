@@ -33,11 +33,11 @@ let config = require("./config.json");
 
 // Variables
 
-var IMAGES_PATH = "./images/";
+var IMAGES_PATH = "styles/images/";
 var EXT_HTML = [".pug", ".html"];
 var SVGS_SOURCE_PATH = "bundle-svgs/";
 var SVGS_ALL_PATH = "bundle-svgs/**/*.svg";
-var SASS_PATH = "sass/**/*.scss";
+var SASS_PATH = "styles/sass/**/*.scss";
 var CSS_PATH = "./css/";
 // var Style_css ='./css/style.css';
 var ASSETS_PATH = "assets/";
@@ -121,9 +121,9 @@ function sassChange() {
     //     html: ['dist/**/*.html']
     // }),
     // clean(),
-    autoprefixer({
-      overrideBrowserslist: ["ie > 9", "safari > 6"],
-    }),
+    // autoprefixer({
+    //   overrideBrowserslist: ["ie > 9", "safari > 6"],
+    // }),
   ];
   return (
     gulp
@@ -247,7 +247,7 @@ function watchChanges() {
 gulp.task("images", function() {
   return (
     gulp
-      .src("images/*.+(png|jpg|jpeg)")
+      .src("styles/images/*.+(png|jpg|jpeg)")
       // Caching images that ran through imagemin
       .pipe(
         imagemin({

@@ -15,12 +15,39 @@ divami WordPress Theme has been created by grace Themes(gracethemes.com), 2015.
 divami WordPress Theme is released under the terms of GNU GPL
 */
 
-/* common styles start */
+.design_approach_section_wrapper {
+	background-color: #DB4833;
+	background-image: url("../../../../public/svg/fold.svg");
+	background-size: 100%;
+}
 
-.footer-block {
-	color: red;
-	font-size: 30px;
-	background-color: black;
+.design_approach_section_wrapper .design_approach_section {
+	margin-left: 70px;
+	margin-right: 70px;
+	padding-top: 110px;
+}
+
+.design_approach_section_wrapper .design_approach_section .title {
+	font-size: 64px;
+	line-height: 76px;
+	text-align: left;
+	letter-spacing: 0.02em;
+	background-color: red;
+	color: #FFFFFF;
+	font-family: "GraphikNormal";
+}
+
+.design_approach_section_wrapper .design_approach_section .description {
+	padding-top: 25px;
+	padding-bottom: 15px;
+	font-size: 26px;
+	line-height: 50px;
+	color: #FFFFFF;
+	font-family: "DomineRegular";
+}
+
+.introductionTittle {
+	display: none;
 }
 
 /*!

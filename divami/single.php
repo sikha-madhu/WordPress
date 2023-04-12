@@ -19,7 +19,7 @@ echo $svgName;
     the_post();
     $blogImage = get_field('blog_image');
     $dirURL = get_template_directory_uri();
-    $imageURL = "/images/details.jpeg";
+    $imageURL = "styles/images/details.jpeg";
     $defaultImageBanner = $dirURL.$imageURL;
     $user = get_userdata(get_the_author_meta('ID')); ?>
     <div class="blog-detail">
@@ -30,18 +30,104 @@ echo $svgName;
             <!-- this is demo path --> 
             <!-- <a href="/divamiblog" class="arrow__btn-link go-to-home-wrapper anim-left">  -->
             <!-- this is demo and live path --> 
-            <!-- <a href="/blog" class="arrow__btn-link go-to-home-wrapper anim-left"> 
-                <img src="<?php echo get_template_directory_uri(); ?>/images/stroke-arrow-right.svg" alt="arrow right icon" class="arrow__btn-icon go-to-blog-list">
+            <a href="/blog" class="arrow__btn-link go-to-home-wrapper anim-left"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/styles/images/stroke-arrow-right.svg" alt="arrow right icon" class="arrow__btn-icon go-to-blog-list">
                 <div class="arrow__btn-link-text">Blog</div>
-            </a> -->
-         
+            </a>
+            <div class="blog__banner-heading">
+                <h1 class="section-title__text">
+                    <span><?php the_title(); ?> <div class="red__dot wobble">
+                            <svg>
+                                <use xlink:href="#red-dot"> </use>
+                            </svg>
+                        </div>
+                    </span>
+                    <?php echo do_shortcode('[rt_reading_time label="Reading Time:" postfix="minutes"]'); ?>
+                </h1>
+            </div>
         </div>
-      
+        <div class="process__header-background1">
+            <div class="wave__animation-block process__wave-anim">
+                <svg id="wave__animation-one" class="wave__animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 20" preserveAspectRatio="none" enable-background="new 0 0 350 20" xml:space="preserve">
+                    <path d="M0,17.1C29.9,17.1,57.8,0,87.5,0c30.2,0,58.1,17.1,87.1,17.1c29.9,0,57.8-17.1,87.7-17.1    c29.9,0,57.8,17.1,87.7,17.1V20H0V17.1z" />
+                </svg>
+            </div>
+        </div>
     </div>
-
+    <div class="blog-detail__content-section">
+        <div class="blog-detail__banner-image">
+            <img class="blog-image hide" src="<?php 
+                if(get_field('blog_image')) {
+                    echo get_field('blog_image');
+                } else {
+                    echo $defaultImageBanner;
+                }
+                    ?>" alt="<?php echo get_the_title(); ?>">
+        </div>
+        <div class="blog-detail__full-content  padding-lr">
+            <div class="blog-detail__content">
+                <?php echo the_content(); ?>
+                <div class="blog-detail__user-info t-show">
+                <div class="blog-detail__profile">
+                    <div class="blog-detail__profile-pic">
+                        <?php echo get_avatar( $user->ID, 40 ); ?>
+                    </div>
+                    <div class="blog-detail__profile-name">
+                        <?php echo $user-> display_name ?>
+                    </div>
+                </div>
+                <div class="blog-detail__share-block hide">
+                    <img class="shareIcon" src="<?php echo get_template_directory_uri(); ?>/styles/images/share.svg"/>
+                </div>
+                <span class="blog-detail__comments hide">
+                    <img class="commentsIcon" src="<?php echo get_template_directory_uri(); ?>/styles/images/message-square.svg"/>
+                    <span class="summaryLabel">
+                        <?php $ccount = get_comments_number(); 
+                            echo $ccount;
+                            ?>
+                    </span>
+                </span>
+            </div>
+                <div class="blog-detail__footer">
+                    <?php
+                        if (comments_open() || '0' != get_comments_number()){
+                        comments_template();}
+                    ?>
+                </div>
+            </div>
+            <div class="blog-detail__user-info t-hide">
+                <div class="blog-detail__left-pannel">
+                    <div class="blog-detail__profile">
+                        <div class="blog-detail__profile-pic">
+                            <?php echo get_avatar( $user->ID, 40 ); ?>
+                        </div>
+                        <div class="blog-detail__profile-name ellipsis">
+                           <span id="author-name" title="<?php echo $user-> display_name ?>"> <?php echo $user-> display_name ?> </span>
+                            <p>Author</p>
+                            <div class="date">
+                                <?php echo get_the_date( 'd M, Y' ) ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="blog-detail__titles"><?php echo get_the_title(); ?></div>
+                </div>
+                <div class="blog-detail__share-block hide">
+                    <img class="shareIcon" src="<?php echo get_template_directory_uri(); ?>/styles/images/share.svg"/>
+                </div>
+                <span class="blog-detail__comments hide">
+                    <img class="commentsIcon" src="<?php echo get_template_directory_uri(); ?>/styles/images/message-square.svg"/>
+                    <span class="summaryLabel">
+                        <?php $ccount = get_comments_number(); 
+                            echo $ccount;
+                            ?>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
     <?php 
         $dirURL = get_template_directory_uri();
-        $imageURL = "/images/banner.jpg";
+        $imageURL = "/styles/images/banner.jpg";
         $defaultImage = $dirURL.$imageURL;
         global $authordata, $post;
         $recent_articles = get_posts(array( 
