@@ -1,21 +1,23 @@
-
-.testimonial{
+.testimonial {
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(163.36deg, #EDF0F2 11.5%, #FAFAFA 89.51%);
-    .dots_background{
+    min-height: 90vh;
+    background: linear-gradient(163.36deg, #edf0f2 11.5%, #fafafa 89.51%);
+
+    .dots-background {
         width: 100%;
-        min-height: 100vh;
-        background-image: url("../../../../public/svg/dots_background.svg");
+        min-height: 90vh;
+        background-image: url("../images/dots_background.svg");
         background-position: center;
         background-size: 100%;
-        .title{
+
+        .title {
             // width: 100%;
             display: flex;
             justify-content: center;
             padding-top: 120px;
             padding-bottom: 60px;
-            .h2_tag{
+
+            .h2-tag {
                 font-family: $GraphikNormal;
                 font-weight: 300;
                 font-size: 64px;
@@ -23,58 +25,69 @@
                 letter-spacing: 0.02em;
                 text-transform: uppercase;
                 color: $Black;
-                @include minLayout(360) {
+
+                @include layout(649) {
                     font-size: 32px;
                 }
-                @include minMaxWidth(650,768){
+
+                @media screen and (max-width: 600px){
+                    font-size: 32px;
+                }
+
+                @include minMaxWidth(650, 768) {
                     font-size: 40px;
                 }
+
                 @include minMaxWidth(768, 1024) {
                     font-size: 50px;
                 }
+
+                @include minMaxWidth(1366, 1440) {
+                    font-size: 64px;
+                }
             }
-            @include minLayout(360) {
+
+            @include minMaxWidth(360, 650) {
                 padding: 39px 0 37px;
             }
         }
-        .container{
+
+        .container {
             padding-bottom: 120px;
             position: relative;
             width: 76%;
-            height: 484px;
+            height: 604px;
             margin: 0px auto;
-            @include minMaxWidth(650, 773) {
-                height: 380px;
-                margin: 0px auto;
-            }
 
-            @include minMaxWidth(774, 1024) {
-                height: 380px;
-            }
+            // @include minMaxWidth(650, 774) {
+            //     height: 420px;
+            //     margin: 0px auto;
+            // }
 
-            @include minLayout(360){
+            @include layout(360) {
                 height: 468px;
-                padding-bottom: 65px;
+                padding-bottom: 55px;
+                max-width: 320px;
+                width: 100%;
             }
-            
-            .quote{
+
+            .quote {
                 position: absolute;
                 left: 70px;
                 top: -35px;
-                @include layout(650){
+                @include layout(650) {
                     display: none;
                 }
-                .quote_icon{
-                    width: 67px;
-                    height: 90px;
-                    @include minMaxWidth(650,768){
+
+                .quote-icon {
+                    width: 43px;
+                    height: 66px;
+                    @include minMaxWidth(650, 768) {
                         width: 40px;
-                    }
-                    @include minMaxWidth(768, 1024) {
-                        width: 50px;
                     }
                 }
             }
+
             .card {
                 width: 100%;
                 height: 100%;
@@ -82,8 +95,8 @@
                 box-shadow: 20px 20px 57px rgba(0, 0, 0, 0.08);
                 display: flex;
                 justify-content: space-between;
-                
-                @include layout(650){
+
+                @include layout(650) {
                     flex-direction: column;
                     max-width: 320px;
                     margin: 0 auto;
@@ -91,76 +104,93 @@
                     height: fit-content;
                 }
 
-                @include minMaxWidth(650,768){
+                @include minMaxWidth(650, 768) {
                     gap: 15px;
                 }
+
                 @include minMaxWidth(768, 1024) {
                     gap: 20px;
                 }
+
                 @include minMaxWidth(1024, 1206) {
                     gap: 15px;
                 }
-                .card_content {
+
+                .card-content {
                     padding-left: 70px;
                     padding-top: 70px;
-                    @include layout(650){
+
+                    @include layout(650) {
                         padding-left: 20px;
-                        padding-top: 40px;
+                        padding-top: 38px;
                         padding-right: 20px;
                         padding-bottom: 30px;
                     }
-                    .card_description {
+
+                    .card-description {
                         max-width: 623px;
                         padding-bottom: 40px;
-                        @include layout(650){
+
+                        @include layout(650) {
                             padding-bottom: 30px;
                         }
-                        .description_content{
+
+                        .description-content {
                             font-family: $DomineRegular;
                             font-weight: 400;
                             font-size: 26px;
                             line-height: 50px;
                             color: $Black;
-                            @include layout(650){
+
+                            @include layout(650) {
                                 font-size: 16px;
                                 line-height: 30px;
                             }
-                            @include minMaxWidth(650,768){
-                                font-size: 14px;
-                                line-height: 28px;
-                            }
-                            @include minMaxWidth(768,1024){
+
+                            // @include minMaxWidth(650, 768) {
+                            //     font-size: 14px;
+                            //     line-height: 28px;
+                            // }
+
+                            @include minMaxWidth(774, 1024) {
                                 font-size: 23px;
                                 line-height: 35px;
                             }
-                            @include minMaxWidth(1024,1306){
-                                font-size: 24px;
-                                line-height: 40px;
+
+                            @include minMaxWidth(1024, 1306) {
+                                // font-size: 24px;
+                                // line-height: 40px;
                             }
                         }
                     }
-                    .client_name {
+
+                    .client-name {
                         font-family: $GraphikNormal;
                         font-size: 20px;
                         line-height: 24px;
                         letter-spacing: 0.02em;
                         color: $Black;
                         padding-bottom: 6px;
-                        @include layout(650){
+
+                        @include layout(650) {
                             font-size: 14px;
                             line-height: 16px;
-                            margin-top: 10px;
+                            margin-top: 16px;
                         }
-                        @include minMaxWidth(650,768){
-                            font-size: 12px;
-                        }
-                        @include minMaxWidth(768,1024){
+
+                        // @include minMaxWidth(650, 768) {
+                        //     font-size: 12px;
+                        // }
+
+                        @include minMaxWidth(774, 1024) {
                             font-size: 13px;
                         }
                     }
-                    .client_designation {
+
+                    .client-designation {
                         display: flex;
                         gap: 11px;
+
                         .name {
                             font-family: $GraphikNormal;
                             font-weight: 300;
@@ -169,11 +199,13 @@
                             letter-spacing: 0.02em;
                             color: $Black;
                             white-space: nowrap;
-                            @include layout(650){
+
+                            @include layout(650) {
                                 font-weight: 300;
                                 font-size: 14px;
                                 line-height: 16px;
                             }
+
                             @include minMaxWidth(650, 768) {
                                 font-size: 12px;
                             }
@@ -182,29 +214,36 @@
                                 font-size: 13px;
                             }
                         }
-                        .custom_line {
+
+                        .custom-line {
                             width: 486px;
                             height: 0px;
                             border: 1px solid $Orange;
                             align-self: center;
-                            @include minMaxWidth(650,768){
+
+                            @include minMaxWidth(650, 768) {
                                 width: 90px;
                             }
+
                             @include minMaxWidth(768, 1024) {
                                 width: 200px;
                             }
+
                             @include minMaxWidth(1024, 1125) {
                                 width: 290px;
                             }
+
                             @include minMaxWidth(1126, 1306) {
                                 width: 300px;
                             }
                         }
                     }
                 }
-                .card_image{
+
+                .card-image {
                     height: 100%;
-                    @include layout(650){
+
+                    @include layout(650) {
                         display: none;
                     }
                 }
@@ -212,22 +251,28 @@
         }
     }
 }
-.mob_client_image{
+
+.mob-client-image {
     display: none;
-    @include layout(650){
+
+    @include layout(650) {
         display: block;
     }
 }
-.mob_client_image{
+
+.mob-client-image {
+
     filter: grayscale(1);
-    img{
+    img {
         width: 100px;
         height: 106px;
     }
 }
-.mob_quote{
+
+.mob-quote {
     display: none;
-    @include layout(650){
+
+    @include layout(650) {
         display: block;
         position: absolute;
         top: -7%;
