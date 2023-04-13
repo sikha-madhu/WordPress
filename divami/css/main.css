@@ -24,7 +24,7 @@ divami WordPress Theme is released under the terms of GNU GPL
 
 @font-face {
 	font-family: "DomineRegular";
-	src: url("../fonts/Domine-Regular.ttf") format("truetype");
+	src: url("./fonts/Domine-Regular.ttf") format("truetype");
 	font-size: normal;
 	font-weight: 400;
 }
@@ -38,18 +38,25 @@ divami WordPress Theme is released under the terms of GNU GPL
 
 @font-face {
 	font-family: "DomineRegular";
-	src: url("../fonts/Domine-Regular.ttf") format("truetype");
+	src: url("./fonts/Domine-Regular.ttf") format("truetype");
 	font-size: normal;
 	font-weight: 400;
 }
 
-.design_approach_section_wrapper {
+body {
+	margin: unset;
+}
+
+.design-approach {
 	background-color: #db4833;
+}
+
+.design-approach-section-wrapper {
 	background-image: url("../../../../public/svg/fold.svg");
 	background-size: 100%;
 }
 
-.design_approach_section_wrapper .design_approach_section {
+.design-approach-section-wrapper .design-approach-section {
 	margin-left: 70px;
 	margin-right: 70px;
 	padding-top: 110px;
@@ -57,7 +64,7 @@ divami WordPress Theme is released under the terms of GNU GPL
 	max-width: 782px;
 }
 
-.design_approach_section_wrapper .design_approach_section .title {
+.design-approach-section-wrapper .design-approach-section .title {
 	font-size: 64px;
 	line-height: 76px;
 	text-align: left;
@@ -67,7 +74,7 @@ divami WordPress Theme is released under the terms of GNU GPL
 	margin: unset;
 }
 
-.design_approach_section_wrapper .design_approach_section .description {
+.design-approach-section-wrapper .design-approach-section .description {
 	padding-top: 25px;
 	padding-bottom: 15px;
 	font-size: 26px;
@@ -78,7 +85,6 @@ divami WordPress Theme is released under the terms of GNU GPL
 }
 
 .design-approach-cards-wrapper {
-	background-color: #db4833;
 	background-image: url("../../../../public/svg/fold.svg");
 	background-size: 100%;
 }
@@ -89,35 +95,38 @@ divami WordPress Theme is released under the terms of GNU GPL
 	padding-bottom: 100px;
 }
 
-.design-approach-cards-wrapper .cards_row {
+.design-approach-cards-wrapper .cards-row {
 	padding-top: 70px;
-	margin-bottom: 100px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 1230px;
 	width: 100%;
 }
 
-.design-approach-cards-wrapper .each_card {
+.design-approach-cards-wrapper .mobile-card-img {
+	display: none;
+}
+
+.design-approach-cards-wrapper .each-card {
 	margin-bottom: 20px;
 	width: 290px;
 	background: #f5f5f4;
 	margin-right: 20px;
 }
 
-.design-approach-cards-wrapper .each_card .card_img {
+.design-approach-cards-wrapper .each-card .card-img {
 	text-align: center;
 	padding-top: 117px;
 	padding-bottom: 56px;
 	min-height: 108px;
 }
 
-.design-approach-cards-wrapper .each_card .card_body {
+.design-approach-cards-wrapper .each-card .card-body {
 	margin-left: 36px;
 	margin-right: 36px;
 }
 
-.design-approach-cards-wrapper .each_card .card_body .card_title {
+.design-approach-cards-wrapper .each-card .card-body .card-title {
 	line-height: 38px;
 	text-align: center;
 	font-family: "GraphikRegular";
@@ -127,7 +136,7 @@ divami WordPress Theme is released under the terms of GNU GPL
 	margin: unset;
 }
 
-.design-approach-cards-wrapper .each_card .card_body .card_text {
+.design-approach-cards-wrapper .each-card .card-body .card-text {
 	font-family: "GraphikRegular";
 	font-size: 16px;
 	line-height: 26px;
@@ -140,12 +149,16 @@ divami WordPress Theme is released under the terms of GNU GPL
 	color: #232323;
 }
 
-.design-approach-cards-wrapper .each_card:nth-child(4) {
+.design-approach-cards-wrapper .each-card:nth-child(4) {
 	margin-right: 0px;
 }
 
-.design-approach-cards-wrapper .each_card:nth-child(8) {
+.design-approach-cards-wrapper .each-card:nth-child(8) {
 	margin-right: 0px;
+}
+
+.test-font {
+	font-family: "GraphikRegular";
 }
 
 /* Mobile Portrait View */
@@ -1044,6 +1057,68 @@ h6 {
 
 }
 
+@media (min-width: 360px) and (max-width: 450px) {
+
+.design-approach-cards-wrapper .design-approach-cards-section {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .cards-row {
+	padding-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 360px;
+	width: 100%;
+	margin: auto;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .card-body .card-title {
+	text-align: center;
+	letter-spacing: 0.16px;
+	font-size: 20px;
+	line-height: 30px;
+	color: #232323;
+	margin-bottom: 35px;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .card-body .card-text {
+	display: none;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card {
+	margin-bottom: 20px;
+	width: 150px;
+	background: #f5f5f4;
+	margin-right: 20px;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card .card-img {
+	text-align: center;
+	padding-top: 35px;
+	padding-bottom: 31px;
+	min-height: 104px;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card .card-body {
+	margin-left: unset;
+	margin-right: unset;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card:nth-child(n+1):nth-child(-n+4) {
+	display: block;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card:nth-child(n+5):nth-child(-n+8) {
+	display: none;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card:nth-child(even) {
+	margin-right: 0px;
+}
+
+}
+
 @media (min-width: 360px) and (max-width: 400px) {
 
 .introduction_wrapper .img2 {
@@ -1514,7 +1589,7 @@ h6 {
 
 @media (min-width: 900px) and (max-width: 1023px) {
 
-.design-approach-cards-wrapper .each_card .card_body .card_text {
+.design-approach-cards-wrapper .each-card .card-body .card-text {
 	min-height: 130px;
 }
 
@@ -1635,6 +1710,18 @@ h6 {
 
 .landing .performances .performance_area .content .name {
 	font-size: 12px;
+}
+
+}
+
+@media (min-width: 1030px) and (max-width: 1347px) {
+
+.design-approach-cards-wrapper .each-card:nth-child(4) {
+	margin-right: 20px;
+}
+
+.design-approach-cards-wrapper .each-card:nth-child(8) {
+	margin-right: 20px;
 }
 
 }
@@ -2232,7 +2319,7 @@ h2.section_title {
 
 @media (max-width: 730px) {
 
-.design-approach-cards-wrapper .each_card .card_body .card_text {
+.design-approach-cards-wrapper .each-card .card-body .card-text {
 	min-height: 104px;
 	max-height: 104px;
 }
@@ -2300,28 +2387,11 @@ h2.section_title {
 
 @media (max-width: 640px) {
 
-.design-approach-cards-wrapper .each_card .card_body .card_title {
-	line-height: 38px;
-	text-align: center;
-	letter-spacing: 0.16px;
-	font-size: 26px;
-	line-height: 38px;
-	color: #232323;
-	margin-bottom: 35px;
-}
-
-.design-approach-cards-wrapper .each_card .card_body .card_text {
+.design-approach-cards-wrapper .each-card .card-body .card-text {
 	display: none;
 }
 
-.design-approach-cards-wrapper .each_card .card_img {
-	text-align: center;
-	padding-top: 35px;
-	padding-bottom: 31px;
-	min-height: 104px;
-}
-
-.design-approach-cards-wrapper .each_card .card_body {
+.design-approach-cards-wrapper .each-card .card-body {
 	margin-left: 0px;
 	margin-right: 0px;
 }
@@ -2330,39 +2400,26 @@ h2.section_title {
 
 @media (max-width: 600px) {
 
-.design_approach_section_wrapper .design_approach_section {
+.design-approach-section-wrapper .design-approach-section {
 	margin-left: 40px;
 	margin-right: 40px;
 	padding-top: 42px;
 }
 
-.design_approach_section_wrapper .design_approach_section .cards_row {
+.design-approach-section-wrapper .design-approach-section .cards-row {
 	margin-top: 40px;
-	margin-bottom: 120px;
-}
-
-.design-approach-cards-wrapper .each_card .card_img {
-	min-height: 70px;
-}
-
-}
-
-@media (max-width: 545px) {
-
-.design-approach-cards-wrapper .each_card .card_body .card_title {
-	font-size: 20px;
 }
 
 }
 
 @media (max-width: 500px) {
 
-.design_approach_section_wrapper .design_approach_section .title {
+.design-approach-section-wrapper .design-approach-section .title {
 	font-size: 32px;
 	line-height: 42px;
 }
 
-.design_approach_section_wrapper .design_approach_section .description {
+.design-approach-section-wrapper .design-approach-section .description {
 	font-size: 20px;
 	line-height: 34px;
 }
@@ -2371,17 +2428,16 @@ h2.section_title {
 
 @media (max-width: 480px) {
 
-.design_approach_section_wrapper .design_approach_section {
+.design-approach-section-wrapper .design-approach-section {
 	margin-left: 30px;
 	margin-right: 30px;
 }
 
-.design_approach_section_wrapper .design_approach_section .cards_row {
+.design-approach-section-wrapper .design-approach-section .cards-row {
 	margin-top: 40px;
-	margin-bottom: 120px;
 }
 
-.design_approach_section_wrapper .description {
+.design-approach-section-wrapper .description {
 	font-size: 20px;
 	line-height: 34px;
 }
@@ -2390,63 +2446,40 @@ h2.section_title {
 
 @media (max-width: 360px) {
 
-.design_approach_section_wrapper .design_approach_section .title {
+.design-approach-section-wrapper .design-approach-section .title {
 	font-size: 32px;
 	line-height: 42px;
 }
 
-.design_approach_section_wrapper .design_approach_section {
+.design-approach-section-wrapper .design-approach-section {
 	padding-top: 42px;
 	margin-left: 20px;
 	margin-right: 20px;
 }
 
-.design_approach_section_wrapper .design_approach_section .cards_row {
+.design-approach-section-wrapper .design-approach-section .cards-row {
 	margin-top: 40px;
-	margin-bottom: 120px;
 }
 
-.design_approach_section_wrapper .design_approach_section .description {
+.design-approach-section-wrapper .design-approach-section .description {
 	font-size: 20px;
 	line-height: 34px;
 	padding-top: 20px;
 }
 
-.design_approach_section_wrapper .design_approach_section .MuiGrid-root,
-.design_approach_section_wrapper .design_approach_section .MuiGrid-item {
+.design-approach-section-wrapper .design-approach-section .MuiGrid-root,
+.design-approach-section-wrapper .design-approach-section .MuiGrid-item {
 	max-width: fit-content !important;
 }
 
-.design-approach-cards-wrapper .each_card .card_body .card_title {
-	font-size: 20px;
-}
-
-.design-approach-cards-wrapper .each_card .card_body .design-approach-cards-section {
+.design-approach-cards-wrapper .each-card .card-body .design-approach-cards-section {
 	margin-left: unset;
 	margin-right: unset;
 }
 
-.design-approach-cards-wrapper .each_card .card_img {
-	padding-top: 35px;
-	padding-bottom: 26px;
-	min-height: 66px;
-}
-
-.design-approach-cards-wrapper .each_card .card_body {
+.design-approach-cards-wrapper .each-card .card-body {
 	margin-left: 0px;
 	margin-right: 0px;
-}
-
-.design-approach-cards-wrapper .design-approach-cards-section {
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
-.design-approach-cards-wrapper .each_card {
-	margin-bottom: 20px;
-	width: 150px;
-	background: #f5f5f4;
-	margin-right: 20px;
 }
 
 .project_cards_wrapper {

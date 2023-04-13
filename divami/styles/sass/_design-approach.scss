@@ -1,6 +1,6 @@
 // @font-face {
 //   font-family: 'OpenSans';
-//   src: url('../fonts/OpenSans-VariableFont_wdth,wght.ttf')format('opentype');
+//   src: url('../fonts/OpenSans-VariableFont-wdth,wght.ttf')format('opentype');
 //   font-size: normal;
 //   font-weight: 400;
 // }
@@ -8,13 +8,14 @@
 // .title {
 //   font-family: sans-serif;
 //   }
-
-.design_approach_section_wrapper {
+.design-approach {
   background-color: $DarkOrange;
+}
+.design-approach-section-wrapper {
   background-image: url("../../../../public/svg/fold.svg");
   background-size: 100%;
 
-  .design_approach_section {
+  .design-approach-section {
     margin-left: 70px;
     margin-right: 70px;
     padding-top: 110px;
@@ -60,31 +61,29 @@
     }
 
     // @include layout(600){
-    //   .cards_row{
+    //   .cards-row{
     //     margin-top: 40px;
     //   }
     // }
   }
 
   @include layout(600) {
-    .design_approach_section {
+    .design-approach-section {
       margin-left: 40px;
       margin-right: 40px;
       padding-top: 42px;
-      .cards_row {
+      .cards-row {
         margin-top: 40px;
-        margin-bottom: 120px;
       }
     }
   }
 
   @include layout(480) {
-    .design_approach_section {
+    .design-approach-section {
       margin-left: 30px;
       margin-right: 30px;
-      .cards_row {
+      .cards-row {
         margin-top: 40px;
-        margin-bottom: 120px;
       }
     }
     .description {
@@ -94,13 +93,12 @@
   }
 
   @include layout(360) {
-    .design_approach_section {
+    .design-approach-section {
       padding-top: 42px;
       margin-left: 20px;
       margin-right: 20px;
-      .cards_row {
+      .cards-row {
         margin-top: 40px;
-        margin-bottom: 120px;
       }
       .description {
         font-size: 20px;
@@ -116,7 +114,6 @@
 }
 
 .design-approach-cards-wrapper {
-  background-color: $DarkOrange;
   background-image: url("../../../../public/svg/fold.svg");
   background-size: 100%;
 
@@ -126,33 +123,35 @@
     padding-bottom: 100px;
   }
 
-  .cards_row {
+  .cards-row {
     padding-top: 70px;
-    margin-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
     max-width: 1230px;
     width: 100%;
   }
- 
-  .each_card {
+  .mobile-card-img {
+    display: none;
+  }
+
+  .each-card {
     margin-bottom: 20px;
     width: 290px;
     background: #f5f5f4;
     margin-right: 20px;
 
-    .card_img {
+    .card-img {
       text-align: center;
       padding-top: 117px;
       padding-bottom: 56px;
       min-height: 108px;
     }
 
-    .card_body {
+    .card-body {
       margin-left: 36px;
       margin-right: 36px;
 
-      .card_title {
+      .card-title {
         line-height: 38px;
         text-align: center;
         font-family: $GraphikNormal;
@@ -162,7 +161,7 @@
         margin: unset;
       }
 
-      .card_text {
+      .card-text {
         font-family: $GraphikNormal;
         font-size: 16px;
         line-height: 26px;
@@ -175,44 +174,44 @@
         color: $Black;
       }
       @include minMaxWidth(900, 1023) {
-        .card_text {
+        .card-text {
           min-height: 130px;
         }
       }
 
       @include layout(730) {
-        .card_text {
+        .card-text {
           min-height: 104px;
           max-height: 104px;
         }
       }
 
       @include layout(640) {
-        .card_title {
-          line-height: 38px;
-          text-align: center;
-          letter-spacing: 0.16px;
-          font-size: 26px;
-          line-height: 38px;
-          color: $Black;
-          margin-bottom: 35px;
-        }
+        // .card-title {
+        //   line-height: 38px;
+        //   text-align: center;
+        //   letter-spacing: 0.16px;
+        //   font-size: 26px;
+        //   line-height: 38px;
+        //   color: $Black;
+        //   margin-bottom: 35px;
+        // }
 
-        .card_text {
+        .card-text {
           display: none;
         }
       }
 
       @include layout(545) {
-        .card_title {
-          font-size: 20px;
-        }
+        // .card-title {
+        //   font-size: 20px;
+        // }
       }
 
       @include layout(360) {
-        .card_title {
-          font-size: 20px;
-        }
+        // .card-title {
+        //   font-size: 20px;
+        // }
         .design-approach-cards-section {
           margin-left: unset;
           margin-right: unset;
@@ -221,63 +220,113 @@
     }
 
     @include layout(640) {
-      .card_img {
-        text-align: center;
-        padding-top: 35px;
-        padding-bottom: 31px;
-        min-height: 104px;
-      }
-      .card_body {
+      // .card-img {
+      //   text-align: center;
+      //   padding-top: 35px;
+      //   padding-bottom: 31px;
+      //   min-height: 104px;
+      // }
+      .card-body {
         margin-left: 0px;
         margin-right: 0px;
       }
     }
 
     @include layout(600) {
-      .card_img {
-        min-height: 70px;
-      }
+      // .card-img {
+      //   min-height: 70px;
+      // }
     }
 
     @include layout(360) {
-      .card_img {
-        padding-top: 35px;
-        padding-bottom: 26px;
-        min-height: 66px;
-      }
-      .card_body {
+      // .card-img {
+      //   padding-top: 35px;
+      //   padding-bottom: 26px;
+      //   min-height: 66px;
+      // }
+      .card-body {
         margin-left: 0px;
         margin-right: 0px;
       }
     }
 
     // @include minMaxWidth(360,640){
-    //   .card_body {
+    //   .card-body {
     //     margin-left: 0px;
     //     margin-right: 0px;
     //   }
     // }
   }
 
-  .each_card:nth-child(4) {
+  .each-card:nth-child(4) {
     margin-right: 0px;
   }
-  .each_card:nth-child(8) {
+  .each-card:nth-child(8) {
     margin-right: 0px;
+  }
+  @include minMaxWidth(1030, 1347) {
+    .each-card:nth-child(4) {
+      margin-right: 20px;
+    }
+    .each-card:nth-child(8) {
+      margin-right: 20px;
+    }
   }
 
-  @include layout(360) {
-   
+  @include minMaxWidth(360, 450) {
     .design-approach-cards-section {
       margin-left: 20px;
       margin-right: 20px;
+      .cards-row {
+        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 360px;
+        width: 100%;
+        margin: auto;
+      }
+      .card-body {
+        .card-title {
+          text-align: center;
+          letter-spacing: 0.16px;
+          font-size: 20px;
+          line-height: 30px;
+          color: $Black;
+          margin-bottom: 35px;
+        }
+        .card-text {
+          display: none;
+        }
+      }
+
+      .each-card {
+        margin-bottom: 20px;
+        width: 150px;
+        background: #f5f5f4;
+        margin-right: 20px;
+        .card-img {
+          text-align: center;
+          padding-top: 35px;
+          padding-bottom: 31px;
+          min-height: 104px;
+        }
+        .card-body {
+          margin-left: unset;
+          margin-right: unset;
+        }
+      }
+      .each-card:nth-child(n + 1):nth-child(-n + 4) {
+        display: block;
+      }
+      .each-card:nth-child(n + 5):nth-child(-n + 8) {
+        display: none;
+      }
+      .each-card:nth-child(even) {
+        margin-right: 0px;
+      }
     }
-    .each_card {
-      margin-bottom: 20px;
-      width: 150px;
-      background: #f5f5f4;
-      margin-right: 20px;
-    
   }
 }
+.test-font {
+  font-family: $GraphikRegular;
 }

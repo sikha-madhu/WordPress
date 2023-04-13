@@ -34,7 +34,7 @@ let config = require("./config.json");
 // Variables
 
 var IMAGES_PATH = "styles/images/";
-var FONTS_PATH = "styles/fonts/";
+// var SASS_FONT_PATH = "styles/fonts";
 var EXT_HTML = [".pug", ".html"];
 var SVGS_SOURCE_PATH = "bundle-svgs/";
 var SVGS_ALL_PATH = "bundle-svgs/**/*.svg";
@@ -189,7 +189,6 @@ function preTemplateChanges() {
                   js_path: JS_PATH,
                   lib_path: ASSETS_PATH + "libs/",
                   img_path: IMAGES_PATH,
-                  font_path: FONTS_PATH,
                   svgs: svgs,
                   fs: fs,
                   validation_key: "x-",
@@ -259,11 +258,21 @@ gulp.task("images", function() {
       .pipe(gulp.dest("images"))
   );
 });
+gulp.task("fonts", function() {
+  return (
+    gulp
+      .src("styles/fonts/)")
+      // Caching images that ran through imagemin
+     
+      .pipe(gulp.dest("fonts"))
+  );
+});
 
 // Tasks
 gulp.task("sass", sassChange);
 gulp.task("templates", preTemplateChanges);
 gulp.task("generate-svg", generateSvg);
+
 // gulp.task('live', server);
 
 // Dev Tasks
