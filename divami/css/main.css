@@ -30,21 +30,6 @@ divami WordPress Theme is released under the terms of GNU GPL
 }
 
 @font-face {
-	font-family: "DomineRegular";
-	src: url("../fonts/NunitoSans-Regular.ttf") format("ttf");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "abc";
-	font-size: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./../fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
 	font-family: "GraphikRegular";
 	src: url("./fonts/GraphikRegular.otf");
 	font-size: normal;
@@ -54,94 +39,6 @@ divami WordPress Theme is released under the terms of GNU GPL
 @font-face {
 	font-family: "DomineRegular";
 	src: url("../fonts/Domine-Regular.ttf") format("truetype");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "DomineRegular";
-	src: url("../fonts/NunitoSans-Regular.ttf") format("ttf");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "abc";
-	font-size: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./../fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
-	font-family: "GraphikRegular";
-	src: url("./fonts/GraphikRegular.otf");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "DomineRegular";
-	src: url("../fonts/Domine-Regular.ttf") format("truetype");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "DomineRegular";
-	src: url("../fonts/NunitoSans-Regular.ttf") format("ttf");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "abc";
-	font-size: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./../fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
-	font-family: "GraphikRegular";
-	src: url("./fonts/GraphikRegular.otf");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "DomineRegular";
-	src: url("../fonts/Domine-Regular.ttf") format("truetype");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "DomineRegular";
-	src: url("../fonts/NunitoSans-Regular.ttf") format("ttf");
-	font-size: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "abc";
-	font-size: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./../fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
-	font-family: "abc";
-	font-size: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./../fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
-	font-family: "domain";
-	src: url("../fonts/NunitoSans-Regular.ttf") format("ttf");
 	font-size: normal;
 	font-weight: 400;
 }
@@ -786,6 +683,11 @@ h2.section_title {
 	font-size: 20px;
 }
 
+.design-approach-cards-wrapper .each_card .card_body .design-approach-cards-section {
+	margin-left: unset;
+	margin-right: unset;
+}
+
 .design-approach-cards-wrapper .each_card .card_img {
 	padding-top: 35px;
 	padding-bottom: 26px;
@@ -795,6 +697,11 @@ h2.section_title {
 .design-approach-cards-wrapper .each_card .card_body {
 	margin-left: 0px;
 	margin-right: 0px;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section {
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 }
