@@ -14,12 +14,17 @@ Tags: green,black,white,one-column,two-columns,right-sidebar,responsive-layout,c
 divami WordPress Theme has been created by grace Themes(gracethemes.com), 2015.
 divami WordPress Theme is released under the terms of GNU GPL
 */
+$Graphik: "Graphik";
+$DomineRegular: "DomineRegular";
+$GraphikNormal: "GraphikRegular";
+$GraphikMedium: "GraphikMedium";
+
 @import "variables";
-@import "styles/sass/common";
-@import "header";
-@import "footer";
-@import "font-awesome";
 @import "fonts";
 @import "mediaqueries";
+@import "common";
+@import "design-approach";
+@import "header";
+@import "footer";
+// @import "font-awesome";
 @import "responsive";
-

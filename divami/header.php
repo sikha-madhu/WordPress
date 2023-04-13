@@ -48,8 +48,6 @@
 
 
 
-
-
   
 	<script src="<?php echo get_template_directory_uri(); ?>/js/widget_clutch.js"></script>
 	<script type="text/javascript" id="hs-script-loader" async defer src="<?php echo get_template_directory_uri(); ?>/js/hubspot.js"></script>
