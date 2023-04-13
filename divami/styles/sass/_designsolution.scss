@@ -1,0 +1,190 @@
+
+
+.designsolution{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: $White1;
+    @include minMaxWidth(300,650){
+      height: 85vh;
+    }
+}
+.main {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 67%;
+    left: 59%;
+    // display: flex;
+    transform: translate(-50%, -50%);
+    @include minMaxWidth(650,770){
+      left:68%;
+    }
+    @include minMaxWidth(300,650){
+      width: 120px;
+      height: 120px;
+      left:66%;
+      top:38%;
+    }
+  }
+  .wave {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 26px solid $White1;
+    position: absolute;
+    /* top: 50%; */
+    transform: translate(-50%, -50%);
+    /* background: linear-gradient(310.69deg, #DADEED 14.38%, #FAFBFF 94.69%); */
+    box-shadow: 11px 11px 20px  #283f7433,
+    11px 11px 20px  #283f7433 inset,
+      -10px -10px 20px #fff,
+      -10px -10px 20px#fff inset, 
+       6px 6px 13px #fff inset;
+       filter: blur(13px);
+       animation: ripple 2.5s 1 cubic-bezier(0.04, 0.65, 0.69, 1.04);
+
+  }
+  .wave2{
+      width:160%;
+      height:160%;
+
+  }
+  .wave3{
+      width: 210% ;
+      height: 210%;
+  }
+  /* .wave4{
+      width:160%;
+      height:160%;
+  } */
+  @keyframes ripple{
+      0%{
+          transform: translate(-50%,-50%) scale(0);
+      }
+      100%{
+          transform: translate(-50%,-50%) scale(1);
+      }
+  }
+  .content{
+       width: 100%;
+      height: 100%; 
+      // max-height: 440px;
+      max-width: 580px;
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: $GraphikNormal;
+    //   color:#232323;
+      animation: text 1200ms  1 cubic-bezier(0.04, 0.65, 0.69, 1.04) forwards;
+      opacity: 0;
+      @include minMaxWidth(650,1400){
+        justify-content: center;
+      }
+      @include minMaxWidth(300,650){
+        top: 0;
+        
+      }
+  }
+  @keyframes text{
+      0%{
+        //   transform: translateY(100%);
+          opacity: 0;
+      }
+      50%{
+        opacity: 0.5;
+      }
+      100%{
+        //   transform: translateY(0%);
+          opacity: 1;
+      }
+  }
+  .tittle{
+    display:flex;
+    padding-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 80px;
+    letter-spacing: 0.01em;
+      @include minMaxWidth(1024, 1230) {
+        font-size: 60px;
+      }
+      @include minMaxWidth(770, 1024) {
+         font-size: 52px;
+        }
+        @include minMaxWidth(650, 770) {
+          font-size: 48px;
+        }
+        @include minMaxWidth(300,650){
+          padding-top: 103px;
+          font-weight: 300;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 13px;
+    padding-bottom: 0;
+        }
+        
+  
+  }
+  .subTittle{
+    padding-bottom: 20px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 38px;
+      @include minMaxWidth(1024, 1230) {
+        font-size: 27px;
+      }
+      @include minMaxWidth(770, 1024) {
+         font-size: 24px;
+        }
+        @include minMaxWidth(650, 770) {
+          font-size: 21px;
+        }
+        @include minMaxWidth(300,650){
+          padding-bottom: 121px;
+          font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 24px;
+        }
+
+  }
+  .description{
+    font-size: 20px;
+    max-width: 634px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 38px;
+    padding: 0px 20px 0px 20px;
+    letter-spacing: 0.02em;
+      @include minMaxWidth(1024, 1230) {
+        font-size: 18px;
+      }
+      @include minMaxWidth(770, 1024) {
+         font-size: 16px;
+        }
+        @include minMaxWidth(650, 770) {
+          font-size: 14px;
+        }
+        @include minMaxWidth(300,650){
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 26px;
+        }
+  }
+  .cointainer{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+  }

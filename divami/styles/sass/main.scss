@@ -16,10 +16,18 @@ divami WordPress Theme is released under the terms of GNU GPL
 */
 @import "variables";
 @import "styles/sass/common";
+@import "mediaqueries";
 @import "header";
 @import "footer";
 @import "font-awesome";
 @import "fonts";
-@import "mediaqueries";
 @import "responsive";
+@import "introduction";
+@import "thechallenge";
+@import "designsolution";
+@import "testmonial";
+@import "landing";
+@import "betterhealth";
+@import "other-project";
+
 

@@ -1,0 +1,455 @@
+
+.landing {
+    position: relative;
+    height: calc(100vh - 60px);
+    max-width: 100%;
+    background-image: url("../../../../public/svg/wave_background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    @include minMaxWidth(360,650){
+        height: calc(100vh - 7px);
+    }
+    .client {
+        padding-left: 70px;
+        @include minMaxWidth(300,650){
+            padding-left: 25px;
+        }
+        .client_title {
+            padding-top: 120px;
+            overflow: hidden;
+            @include minMaxWidth(300,650){
+                padding-top: 50px;
+            }
+            h4 {
+                font-size: 24px;
+                line-height: 26px;
+                color: $textColor;
+                opacity: 0;
+                animation: slide-right-text 200ms ease-in-out 0s 1 forwards;
+                @include minMaxWidth (300,650){
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+        .client_moto {
+            margin-top: 21px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            @include minMaxWidth(300,650){
+                margin: 0;
+            }
+            h2 {
+                font-size: 52px;
+                line-height: 57px;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: $textColor;
+                opacity: 0;
+                animation: slide-right-text 460ms ease-in-out 200ms 1 forwards;
+                @include minLayout(600){
+                    font-size: 32px;
+                }
+                @include minLayout(768){
+                    font-size: 35px;
+                }
+                @include minLayout(1024){
+                    font-size: 40px;
+
+                }
+                @include minLayout(1366){
+                    font-size: 52px;
+                }
+                @include minMaxWidth(300,650){
+                    font-size: 32px;
+                    line-height: 46px;
+                    margin-top: 20px;
+                    margin-bottom: 12px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .client_custom_line {
+            max-width: 198px;
+            height: 0px;
+            border: 1px solid $borderColor;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: slide-right 200ms ease-in 500ms 1 forwards;
+            @include minMaxWidth(300,650){
+                max-width: 99px;
+                height: 0px;
+                margin-bottom: 16px;
+            }
+        }
+        .client_services {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            overflow-x: hidden;
+            animation: slide-right-text 250ms ease-in-out 600ms 1 forwards;
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                .item_circle{
+                    background: $gray1;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                }
+
+                .item_content {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.02em;
+                    color: $textColor;
+                    @include minMaxWidth(300,650){
+                        font-size: 14px;
+                        line-height: 20px;
+
+                    }
+                }
+
+
+            }
+            .item_mobile{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                @include minMaxWidth(300,650){
+                    display: none;
+                }
+                .item_circle{
+                    background: $gray1;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                }
+
+                .item_content {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.02em;
+                    color: $textColor;
+                    @include minMaxWidth(300,650){
+                        font-size: 14px;
+                        line-height: 20px;
+
+                    }
+                }
+            }
+            .item_circle_1 {
+                background: $gray1;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                @include minMaxWidth(650,1460){
+                    display: none;
+                }
+            }
+            
+        }
+    }
+
+    .custom_sphere {
+        position: absolute;
+        top: 68%;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(76.08% 76.08% at 20.1% 41.3%, #8EB5FF 0%, #EDEDED 0.01%, #FFFFFF 0.02%, #EDEDED 15.62%, #D8DADF 64.58%, #C8CBD1 86.3%);
+        border-radius: 50%;
+        transform: rotate(22.88deg);
+        opacity: 0;
+        @include minLayout(1280){
+            animation: movement-of-ball-1280 2s linear forwards 1s;
+        }
+        @include minLayout(1366){
+            animation: movement-of-ball-1366 2s linear forwards 1s;
+        }
+    }
+
+    .performances {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        overflow-y: hidden;
+        left: 29%;
+        bottom: 7%;
+        @include minMaxWidth(650,768){
+            left:8%;
+            gap: 30px;
+        }
+        @include minLayout(768){
+            gap: 43px;
+            left: 20%;
+            bottom: 16%;
+        }
+        @include minLayout(1024){
+            gap: 65px;
+            left: 31%;
+            bottom: 11%;
+        }
+        @include minLayout(1366){
+            gap: 80px;
+            left: 397px;
+            bottom: 100px;
+        }
+        @include minLayout(1367){
+            left:29%;
+            bottom:7%;
+        }
+        @include minMaxWidth(300,450){
+            gap:40px;
+            left: 30px;
+            bottom:11%;
+            flex-wrap: wrap;
+        }
+        @include minMaxWidth(450,650){
+            gap:40px;
+            left: 70px;
+            bottom:12%;
+            flex-wrap: wrap;
+        }
+
+        .performance_area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            animation: slide-up 200ms linear forwards 2000ms;
+            
+            .icon {
+                padding-bottom: 23px;
+                .img{
+                    @include minMaxWidth(650,768){
+                        height:25px;
+                    }
+                    @include minLayout(768) {
+                        height: 27px;
+                    }
+                    @include minLayout(1024) {
+                        height: 32px;
+                    }
+                    @include minLayout(1366){
+                        height: 100%;
+                    }
+                    @include minMaxWidth(300,650){
+                        height: 27px;
+                    }
+                }
+            }
+            .icon_reverse{
+                transform: rotate(-180deg);
+                padding-top: 23px;
+                .img {
+                    @include minMaxWidth(650,768){
+                        height:25px;
+                    }
+                    @include minLayout(768) {
+                        height: 27px;
+                    }
+            
+                    @include minLayout(1024) {
+                        height: 32px;
+                    }
+            
+                    @include minLayout(1366) {
+                        height: 100%;
+                    }
+                    @include minMaxWidth(300,650){
+                        height: 23px;
+                    }
+                }
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .counter {
+                    font-size: 64px;
+                    line-height: 70px;
+                    color: $Black;
+                    @include minMaxWidth(650,768){
+                        font-size: 32px;
+                    }
+                    @include minLayout(768){
+                        font-size: 40px;
+                    }
+                    @include minLayout(1024){
+                        font-size: 50px;
+                    }
+                    @include minLayout(1366){
+                        font-size: 64px;
+                    }
+                    @include minMaxWidth(300,650){
+                        font-size: 32px;
+                        line-height: 35px;
+                    }
+                    span:nth-child(2) {
+                        font-size: 46px;
+                        @include minMaxWidth(650,768){
+                            font-size: 23px ;
+                        }
+                        @include minLayout(768){
+                            font-size: 30px;
+                        }
+                        @include minLayout(1024){
+                            font-size: 46px;
+                        }
+                        @include minMaxWidth(300,650){
+                            font-size: 20px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+
+                .name {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: $Black;
+                    white-space: nowrap;
+                    @include minLayout(768){
+                        font-size: 11px;
+                    }
+                    @include minLayout(1024) {
+                        font-size: 12px;
+                    }
+                    @include minLayout(1366) {
+                        font-size: 16px;
+                    }
+                    @include minMaxWidth(300,650){
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@keyframes slide-right {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right-text {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes movement-of-ball {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-15vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-22vh);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX();
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(150px - 92vh));
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+}
+
+@keyframes movement-of-ball-1280 {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-15vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-22vh);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(150px - 92vh));
+        opacity: 1;
+    }
+}
+@keyframes movement-of-ball-1366 {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-15vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-22vh);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(450px - 100vh));
+        opacity: 1;
+    }
+}

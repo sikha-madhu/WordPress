@@ -1,0 +1,33 @@
+.design_approach_section_wrapper {
+    background-color: $DarkOrange;
+    background-image: url("../../../../public/svg/fold.svg");
+    background-size: 100%;
+  
+  
+    .design_approach_section {
+      margin-left: 70px;
+      margin-right: 70px;
+      padding-top: 110px;
+  
+      .title {
+        font-size: 64px;
+        line-height: 76px;
+        text-align: left;
+        letter-spacing: 0.02em;
+        background-color: red;
+        color: $White;
+        font-family: $GraphikNormal;
+      }
+  
+      .description {
+        padding-top: 25px;
+        padding-bottom: 15px;
+        font-size: 26px;
+        line-height: 50px;
+        color: $White;
+        font-family: $DomineRegular;
+      }
+      
+  
+    }
+  }

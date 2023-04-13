@@ -1,7 +1,7 @@
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/styles/sass/_common.scss' ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/styles/sass/_introduction.scss' ?>">
 <?php
     $args = array(
-        'post_type' => 'introduction',
+        'post_type' => 'case_study',
         'posts_per_page' => 12,
         'order'     => 'DESC',
     );
