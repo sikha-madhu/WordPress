@@ -37,7 +37,7 @@
 
            <div class=each-card>
                <div class=card-img>
-               <img class="" src="<?php echo get_field('card-img') ?>" alt="" >
+               <img class="web-card-img" src="<?php echo get_field('card-img') ?>" alt="" >
                <img class="mobile-card-img" src="<?php echo get_field('card-img') ?>" alt="" >
                </div>
                <div class=card-body>
