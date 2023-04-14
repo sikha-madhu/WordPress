@@ -47,6 +47,12 @@ body {
 	margin: unset;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .design-approach {
 	background-color: #db4833;
 }
@@ -430,26 +436,26 @@ h6 {
 
 .testimonial {
 	width: 100%;
-	min-height: 100vh;
-	background: linear-gradient(163.36deg, #EDF0F2 11.5%, #FAFAFA 89.51%);
+	min-height: 90vh;
+	background: linear-gradient(163.36deg, #edf0f2 11.5%, #fafafa 89.51%);
 }
 
-.testimonial .dots_background {
+.testimonial .dots-background {
 	width: 100%;
-	min-height: 100vh;
-	background-image: url("../../../../public/svg/dots_background.svg");
+	min-height: 90vh;
+	background-image: url("./images/dots_background.svg");
 	background-position: center;
 	background-size: 100%;
 }
 
-.testimonial .dots_background .title {
+.testimonial .dots-background .title {
 	display: flex;
 	justify-content: center;
 	padding-top: 120px;
 	padding-bottom: 60px;
 }
 
-.testimonial .dots_background .title .h2_tag {
+.testimonial .dots-background .title .h2-tag {
 	font-family: "GraphikRegular";
 	font-weight: 300;
 	font-size: 64px;
@@ -459,26 +465,26 @@ h6 {
 	color: #232323;
 }
 
-.testimonial .dots_background .container {
+.testimonial .dots-background .container {
 	padding-bottom: 120px;
 	position: relative;
 	width: 76%;
-	height: 484px;
+	height: 604px;
 	margin: 0px auto;
 }
 
-.testimonial .dots_background .container .quote {
+.testimonial .dots-background .container .quote {
 	position: absolute;
 	left: 70px;
 	top: -35px;
 }
 
-.testimonial .dots_background .container .quote .quote_icon {
-	width: 67px;
-	height: 90px;
+.testimonial .dots-background .container .quote .quote-icon {
+	width: 43px;
+	height: 66px;
 }
 
-.testimonial .dots_background .container .card {
+.testimonial .dots-background .container .card {
 	width: 100%;
 	height: 100%;
 	background: #ffffff;
@@ -487,17 +493,17 @@ h6 {
 	justify-content: space-between;
 }
 
-.testimonial .dots_background .container .card .card_content {
+.testimonial .dots-background .container .card .card-content {
 	padding-left: 70px;
 	padding-top: 70px;
 }
 
-.testimonial .dots_background .container .card .card_content .card_description {
+.testimonial .dots-background .container .card .card-content .card-description {
 	max-width: 623px;
 	padding-bottom: 40px;
 }
 
-.testimonial .dots_background .container .card .card_content .card_description .description_content {
+.testimonial .dots-background .container .card .card-content .card-description .description-content {
 	font-family: "DomineRegular";
 	font-weight: 400;
 	font-size: 26px;
@@ -505,7 +511,7 @@ h6 {
 	color: #232323;
 }
 
-.testimonial .dots_background .container .card .card_content .client_name {
+.testimonial .dots-background .container .card .card-content .client-name {
 	font-family: "GraphikRegular";
 	font-size: 20px;
 	line-height: 24px;
@@ -514,12 +520,12 @@ h6 {
 	padding-bottom: 6px;
 }
 
-.testimonial .dots_background .container .card .card_content .client_designation {
+.testimonial .dots-background .container .card .card-content .client-designation {
 	display: flex;
 	gap: 11px;
 }
 
-.testimonial .dots_background .container .card .card_content .client_designation .name {
+.testimonial .dots-background .container .card .card-content .client-designation .name {
 	font-family: "GraphikRegular";
 	font-weight: 300;
 	font-size: 20px;
@@ -529,31 +535,32 @@ h6 {
 	white-space: nowrap;
 }
 
-.testimonial .dots_background .container .card .card_content .client_designation .custom_line {
+.testimonial .dots-background .container .card .card-content .client-designation .custom-line {
 	width: 486px;
 	height: 0px;
 	border: 1px solid #d94030;
 	align-self: center;
 }
 
-.testimonial .dots_background .container .card .card_image {
+.testimonial .dots-background .container .card .card-image {
 	height: 100%;
+	mix-blend-mode: luminosity;
 }
 
-.mob_client_image {
+.mob-client-image {
 	display: none;
 }
 
-.mob_client_image {
+.mob-client-image {
 	filter: grayscale(1);
 }
 
-.mob_client_image img {
+.mob-client-image img {
 	width: 100px;
 	height: 106px;
 }
 
-.mob_quote {
+.mob-quote {
 	display: none;
 }
 
@@ -1147,24 +1154,11 @@ h6 {
 
 }
 
-@media (min-width: 360px) {
+@media (min-width: 360px) and (max-width: 650px) {
 
-.testimonial .dots_background .title .h2_tag {
-	font-size: 32px;
-}
-
-.testimonial .dots_background .title {
+.testimonial .dots-background .title {
 	padding: 39px 0 37px;
 }
-
-.testimonial .dots_background .container {
-	height: 468px;
-	padding-bottom: 65px;
-}
-
-}
-
-@media (min-width: 360px) and (max-width: 650px) {
 
 .landing {
 	height: calc(100vh - 7px);
@@ -1406,32 +1400,23 @@ h6 {
 
 @media (min-width: 650px) and (max-width: 768px) {
 
-.testimonial .dots_background .title .h2_tag {
+.testimonial .dots-background .title .h2-tag {
 	font-size: 40px;
 }
 
-.testimonial .dots_background .container .quote .quote_icon {
+.testimonial .dots-background .container .quote .quote-icon {
 	width: 40px;
 }
 
-.testimonial .dots_background .container .card {
+.testimonial .dots-background .container .card {
 	gap: 15px;
 }
 
-.testimonial .dots_background .container .card .card_content .card_description .description_content {
-	font-size: 14px;
-	line-height: 28px;
-}
-
-.testimonial .dots_background .container .card .card_content .client_name {
+.testimonial .dots-background .container .card .card-content .client-designation .name {
 	font-size: 12px;
 }
 
-.testimonial .dots_background .container .card .card_content .client_designation .name {
-	font-size: 12px;
-}
-
-.testimonial .dots_background .container .card .card_content .client_designation .custom_line {
+.testimonial .dots-background .container .card .card-content .client-designation .custom-line {
 	width: 90px;
 }
 
@@ -1458,15 +1443,6 @@ h6 {
 
 }
 
-@media (min-width: 650px) and (max-width: 773px) {
-
-.testimonial .dots_background .container {
-	height: 380px;
-	margin: 0px auto;
-}
-
-}
-
 @media (min-width: 650px) and (max-width: 1460px) {
 
 .landing .client .client_services .item_circle_1 {
@@ -1475,34 +1451,47 @@ h6 {
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 651px) and (max-width: 774px) {
 
-.testimonial .dots_background .title .h2_tag {
-	font-size: 50px;
+.testimonial .dots-background .container {
+	padding-bottom: 90px;
 }
 
-.testimonial .dots_background .container .quote .quote_icon {
-	width: 50px;
+.testimonial .dots-background .container .quote {
+	left: 40px;
 }
 
-.testimonial .dots_background .container .card {
-	gap: 20px;
+.testimonial .dots-background .container .card .card-content {
+	padding-left: 40px;
+	padding-top: 40px;
 }
 
-.testimonial .dots_background .container .card .card_content .card_description .description_content {
-	font-size: 23px;
+.testimonial .dots-background .container .card .card-content .card-description {
+	padding-bottom: 30px;
+}
+
+.testimonial .dots-background .container .card .card-content .card-description .description-content {
+	font-size: 18px;
 	line-height: 35px;
 }
 
-.testimonial .dots_background .container .card .card_content .client_name {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+.testimonial .dots-background .title .h2-tag {
+	font-size: 50px;
+}
+
+.testimonial .dots-background .container .card {
+	gap: 20px;
+}
+
+.testimonial .dots-background .container .card .card-content .client-designation .name {
 	font-size: 13px;
 }
 
-.testimonial .dots_background .container .card .card_content .client_designation .name {
-	font-size: 13px;
-}
-
-.testimonial .dots_background .container .card .card_content .client_designation .custom_line {
+.testimonial .dots-background .container .card .card-content .client-designation .custom-line {
 	width: 200px;
 }
 
@@ -1606,8 +1595,17 @@ h6 {
 
 @media (min-width: 774px) and (max-width: 1024px) {
 
-.testimonial .dots_background .container {
-	height: 380px;
+.testimonial .dots-background .container .card .card-content .client-name {
+	font-size: 13px;
+}
+
+}
+
+@media (min-width: 775px) and (max-width: 1024px) {
+
+.testimonial .dots-background .container .card .card-content .card-description .description-content {
+	font-size: 23px;
+	line-height: 35px;
 }
 
 }
@@ -1682,24 +1680,15 @@ h6 {
 
 @media (min-width: 1024px) and (max-width: 1206px) {
 
-.testimonial .dots_background .container .card {
+.testimonial .dots-background .container .card {
 	gap: 15px;
-}
-
-}
-
-@media (min-width: 1024px) and (max-width: 1306px) {
-
-.testimonial .dots_background .container .card .card_content .card_description .description_content {
-	font-size: 24px;
-	line-height: 40px;
 }
 
 }
 
 @media (min-width: 1024px) and (max-width: 1125px) {
 
-.testimonial .dots_background .container .card .card_content .client_designation .custom_line {
+.testimonial .dots-background .container .card .card-content .client-designation .custom-line {
 	width: 290px;
 }
 
@@ -1753,7 +1742,7 @@ h6 {
 
 @media (min-width: 1126px) and (max-width: 1306px) {
 
-.testimonial .dots_background .container .card .card_content .client_designation .custom_line {
+.testimonial .dots-background .container .card .card-content .client-designation .custom-line {
 	width: 300px;
 }
 
@@ -1861,6 +1850,14 @@ html {
 
 .landing .custom_sphere {
 	animation: movement-of-ball-1280 2s linear forwards 1s;
+}
+
+}
+
+@media (min-width: 1366px) and (max-width: 1440px) {
+
+.testimonial .dots-background .title .h2-tag {
+	font-size: 64px;
 }
 
 }
@@ -2353,11 +2350,11 @@ h2.section_title {
 
 @media (max-width: 650px) {
 
-.testimonial .dots_background .container .quote {
+.testimonial .dots-background .container .quote {
 	display: none;
 }
 
-.testimonial .dots_background .container .card {
+.testimonial .dots-background .container .card {
 	flex-direction: column;
 	max-width: 320px;
 	margin: 0 auto;
@@ -2365,47 +2362,55 @@ h2.section_title {
 	height: fit-content;
 }
 
-.testimonial .dots_background .container .card .card_content {
+.testimonial .dots-background .container .card .card-content {
 	padding-left: 20px;
-	padding-top: 40px;
+	padding-top: 38px;
 	padding-right: 20px;
 	padding-bottom: 30px;
 }
 
-.testimonial .dots_background .container .card .card_content .card_description {
+.testimonial .dots-background .container .card .card-content .card-description {
 	padding-bottom: 30px;
 }
 
-.testimonial .dots_background .container .card .card_content .card_description .description_content {
+.testimonial .dots-background .container .card .card-content .card-description .description-content {
 	font-size: 16px;
 	line-height: 30px;
 }
 
-.testimonial .dots_background .container .card .card_content .client_name {
+.testimonial .dots-background .container .card .card-content .client-name {
 	font-size: 14px;
 	line-height: 16px;
-	margin-top: 10px;
+	margin-top: 16px;
 }
 
-.testimonial .dots_background .container .card .card_content .client_designation .name {
+.testimonial .dots-background .container .card .card-content .client-designation .name {
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 16px;
 }
 
-.testimonial .dots_background .container .card .card_image {
+.testimonial .dots-background .container .card .card-image {
 	display: none;
 }
 
-.mob_client_image {
+.mob-client-image {
 	display: block;
 }
 
-.mob_quote {
+.mob-quote {
 	display: block;
 	position: absolute;
 	top: -7%;
 	left: 20px;
+}
+
+}
+
+@media (max-width: 649px) {
+
+.testimonial .dots-background .title .h2-tag {
+	font-size: 32px;
 }
 
 }
@@ -2505,6 +2510,13 @@ h2.section_title {
 .design-approach-cards-wrapper .each-card .card-body {
 	margin-left: 0px;
 	margin-right: 0px;
+}
+
+.testimonial .dots-background .container {
+	height: 468px;
+	padding-bottom: 55px;
+	max-width: 320px;
+	width: 100%;
 }
 
 .project_cards_wrapper {

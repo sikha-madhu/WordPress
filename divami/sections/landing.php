@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/styles/sass/_landing.scss' ?>">
+
 <?php
     $args = array(
         'post_type' => 'case_study',

@@ -13,9 +13,9 @@
  *
  * @package divami
  */
-get_header();
-add_back_to_top(); 
+// get_header();
+// add_back_to_top(); 
 ?>
 <?php get_template_part("landing-page")?>
 
-<?php get_footer(); ?>
+<!-- <?php get_footer(); ?> -->
