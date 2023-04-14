@@ -173,14 +173,14 @@ body {
 
 /* Tablet View */
 
-.introduction_wrapper {
+.introduction-wrapper {
 	position: relative;
 	display: flex;
 	flex-direction: column-reverse;
 	background: linear-gradient(135.61deg, #EAEDF3 13.77%, #FAFCFF 72.12%);
 }
 
-.introduction_wrapper .container {
+.introduction-wrapper .container {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -190,7 +190,7 @@ body {
 	overflow: hidden;
 }
 
-.introduction_wrapper .introduction {
+.introduction-wrapper .introduction {
 	z-index: 1;
 	position: absolute;
 	top: 0;
@@ -199,17 +199,17 @@ body {
 	background: linear-gradient(121.62deg, #eaedf3 30.2%, rgba(250, 252, 255, 0) 68.08%);
 }
 
-.introduction_wrapper .introductionTittle {
+.introduction-wrapper .introduction-tittle {
 	font-family: "GraphikRegular";
 	font-size: 64px;
 	line-height: 70px;
 	font-weight: 300;
 	padding-left: 70px;
-	padding-top: 140px;
+	margin-top: 140px;
 	margin-bottom: 25px;
 }
 
-.introduction_wrapper .introductionConent {
+.introduction-wrapper .introduction-conent {
 	font-family: "GraphikRegular";
 	width: 482px;
 	height: 190px;
@@ -218,23 +218,24 @@ body {
 	font-weight: 300;
 	padding-left: 70px;
 	letter-spacing: 0.4px;
+	margin: 0px;
 }
 
-.introduction_wrapper .img1 {
+.introduction-wrapper .img1 {
 	position: absolute;
 	top: 14%;
 	left: 9%;
 	width: 957px;
 }
 
-.introduction_wrapper .img1_1 {
+.introduction-wrapper .img1-1 {
 	position: absolute;
 	top: 60%;
 	left: 16%;
 	width: 413px;
 }
 
-.introduction_wrapper .img1_2 {
+.introduction-wrapper .img1-2 {
 	width: 312px;
 	position: absolute;
 	z-index: 1;
@@ -242,14 +243,14 @@ body {
 	left: 14%;
 }
 
-.introduction_wrapper .img2 {
+.introduction-wrapper .img2 {
 	position: absolute;
 	top: 33%;
 	left: 55%;
 	width: 1061px;
 }
 
-.introduction_wrapper .img3 {
+.introduction-wrapper .img3 {
 	position: absolute;
 	width: 678px;
 	top: 11%;
@@ -257,7 +258,7 @@ body {
 	animation: image 1s ease-in forwards;
 }
 
-.introduction_wrapper .img4 {
+.introduction-wrapper .img4 {
 	position: absolute;
 	width: 1224px;
 	top: 45%;
@@ -265,7 +266,7 @@ body {
 	animation: image 1s ease-in forwards;
 }
 
-.introduction_wrapper .img5 {
+.introduction-wrapper .img5 {
 	position: absolute;
 	top: 75%;
 	left: 72%;
@@ -282,30 +283,30 @@ h6 {
 	margin: 0;
 }
 
-.challenge_section_wrapper {
+.challenge-section-wrapper {
 	position: relative;
 	background-color: #f5f5f5;
 }
 
-.challenge_section_wrapper .des {
+.challenge-section-wrapper .des {
 	display: flex;
 	flex-direction: row;
 	gap: 110px;
 }
 
-.challenge_section_wrapper .challenge-content {
+.challenge-section-wrapper .challenge-content {
 	display: flex;
 	flex-direction: column;
 }
 
-.challenge_section_wrapper .challenge_section {
+.challenge-section-wrapper .challenge-section {
 	padding-top: 172px;
 	margin-left: 70px;
 	margin-right: 70px;
 	padding-bottom: 154px;
 }
 
-.challenge_section_wrapper .challenge_section .para {
+.challenge-section-wrapper .challenge-section .para {
 	font-family: "GraphikRegular";
 	font-size: 20px;
 	line-height: 38px;
@@ -315,23 +316,23 @@ h6 {
 	max-width: 546px;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_desc_col {
+.challenge-section-wrapper .challenge-section .challenge-desc-col {
 	padding-top: 172px;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_img {
+.challenge-section-wrapper .challenge-section .challenge-img {
 	text-align: left;
 	padding-left: 111px;
-	width: 428px;
-	height: 479px;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_img img {
-	max-width: 100%;
-	max-height: 100%;
+.challenge-section-wrapper .challenge-section .challenge-img img {
+	position: absolute;
+	width: 417px;
+	height: 417px;
+	top: 135px;
 }
 
-.challenge_section_wrapper .challenge_section .title {
+.challenge-section-wrapper .challenge-section .title {
 	font-family: "GraphikRegular";
 	font-size: 64px;
 	line-height: 100%;
@@ -341,26 +342,21 @@ h6 {
 	max-width: 518px;
 }
 
-.designsolution {
+.design-solution {
 	position: relative;
 	width: 100%;
-	height: 100vh;
-	background: #f5f5f5; /* .wave4{
-      width:160%;
-      height:160%;
-  } */
+	height: 114vh;
+	background: #f5f5f5;
 }
 
-.designsolution .main {
-	width: 260px;
-	height: 260px;
+.design-solution-main {
+	width: 100%;
 	position: absolute;
-	top: 67%;
-	left: 59%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
 }
 
-.designsolution .wave {
+.wave {
 	width: 100%;
 	height: 100%;
 	border-radius: 100%;
@@ -373,20 +369,27 @@ h6 {
 	animation: ripple 2.5s 1 cubic-bezier(0.04, 0.65, 0.69, 1.04);
 }
 
-.designsolution .wave2 {
+.wave2 {
 	width: 160%;
 	height: 160%;
 }
 
-.designsolution .wave3 {
+.wave3 {
 	width: 210%;
 	height: 210%;
 }
 
-.designsolution .content {
+/* .wave4{
+    width:160%;
+    height:160%;
+} */
+
+.design-solution-content {
 	width: 100%;
 	height: 100%;
+	margin-top: 177px;
 	max-width: 580px;
+	max-height: 523px;
 	position: absolute;
 	z-index: 1;
 	display: flex;
@@ -397,8 +400,9 @@ h6 {
 	opacity: 0;
 }
 
-.designsolution .tittle {
+.design-solution-tittle {
 	display: flex;
+	width: 595px;
 	padding-bottom: 40px;
 	justify-content: center;
 	align-items: center;
@@ -409,25 +413,25 @@ h6 {
 	letter-spacing: 0.01em;
 }
 
-.designsolution .subTittle {
+.design-solution-subTittle {
 	padding-bottom: 20px;
 	font-weight: 300;
 	font-size: 30px;
 	line-height: 38px;
 }
 
-.designsolution .description {
+.design-solution-description {
 	font-size: 20px;
 	max-width: 634px;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 20px;
 	line-height: 38px;
-	padding: 0px 20px 0px 20px;
 	letter-spacing: 0.02em;
+	text-align: center;
 }
 
-.designsolution .cointainer {
+.design-solution-cointainer {
 	display: flex;
 	width: 100%;
 	height: 100%;
@@ -747,33 +751,39 @@ h6 {
 	white-space: nowrap;
 }
 
-.health_care_wrapper {
+.health-care-wrapper {
 	padding-top: 115px;
 	background-color: #f5f5f5;
 	padding-bottom: 130px;
+	display: flex;
 }
 
-.health_care_wrapper .health_card_wrapper {
-	width: 72%;
-	margin-top: 36px;
+.health-care-wrapper .health-card-wrapper {
+	margin-top: 60px;
 	margin-left: 100px;
 }
 
-.health_care_wrapper .health_card_wrapper .health_care_card {
+.health-care-wrapper .health-card-wrapper .health-care-card {
 	padding-top: 75px;
 	padding-bottom: 80px;
+	width: 494px;
+	height: 541px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.health_care_wrapper .health_card_wrapper .health_care_image {
+.health-care-wrapper .health-card-wrapper .health-care-image {
 	text-align: center;
 }
 
-.health_care_wrapper .health_card_wrapper .health_care_image .logo {
+.health-care-wrapper .health-card-wrapper .health-care-image .logo {
 	height: 106px;
 	width: 125px;
 }
 
-.health_care_wrapper .health_card_wrapper .card_title {
+.health-care-wrapper .health-card-wrapper .card-title {
 	font-family: "GraphikRegular";
 	font-size: 30px;
 	line-height: 38px;
@@ -783,31 +793,31 @@ h6 {
 	margin-top: 70px;
 }
 
-.health_care_wrapper .health_card_wrapper .card_description {
+.health-care-wrapper .health-card-wrapper .card-description {
 	font-family: "GraphikRegular";
 	font-size: 20px;
 	line-height: 38px;
 	letter-spacing: 0.16px;
 	color: #232323;
-	text-align: center;
+	text-align: left;
 	margin-top: 20px;
-	padding-left: 55px;
-	padding-right: 63px;
+	margin-left: 55px;
+	margin-right: 63px;
 }
 
-.health_care_wrapper .health_care_details {
-	margin-left: 70px;
-	margin-right: 70px;
+.health-care-wrapper .health-care-details {
+	margin-left: 104px;
+	margin-right: 109px;
 }
 
-.health_care_wrapper .health_care_details .title {
+.health-care-wrapper .health-care-details .title {
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: 0.16px;
 	font-family: "GraphikMedium";
 }
 
-.health_care_wrapper .health_care_details .description {
+.health-care-wrapper .health-care-details .description {
 	font-family: "GraphikRegular";
 	font-size: 20px;
 	line-height: 38px;
@@ -853,43 +863,47 @@ h6 {
 
 @media (min-width: 300px) and (max-width: 650px) {
 
-.introduction_wrapper .container {
+.introduction-wrapper .container {
 	min-height: 863px;
 }
 
-.introduction_wrapper .introduction {
+.introduction-wrapper .introduction {
 	background: none;
 	min-height: 863px;
 }
 
-.introduction_wrapper .img1 {
+.introduction-wrapper .img1 {
 	display: none;
 }
 
-.introduction_wrapper .img3 {
+.introduction-wrapper .img3 {
 	display: none;
 }
 
-.introduction_wrapper .img5 {
+.introduction-wrapper .img5 {
 	display: none;
 }
 
-.designsolution {
-	height: 85vh;
+.challenge-section-wrapper .des {
+	flex-direction: column-reverse;
 }
 
-.designsolution .main {
-	width: 120px;
-	height: 120px;
-	left: 66%;
-	top: 38%;
+.challenge-section-wrapper .challenge-section .challenge-img img {
+	width: 417px;
+	height: 417px;
+	top: 135px;
 }
 
-.designsolution .content {
+.design-solution {
+	height: 76vh;
+}
+
+.design-solution-content {
+	margin-top: 0px;
 	top: 0;
 }
 
-.designsolution .tittle {
+.design-solution-tittle {
 	padding-top: 103px;
 	font-weight: 300;
 	font-size: 32px;
@@ -900,7 +914,7 @@ h6 {
 	padding-bottom: 0;
 }
 
-.designsolution .subTittle {
+.design-solution-subTittle {
 	padding-bottom: 121px;
 	font-style: normal;
 	font-weight: 300;
@@ -908,11 +922,18 @@ h6 {
 	line-height: 24px;
 }
 
-.designsolution .description {
+.design-solution-description {
 	font-style: normal;
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 26px;
+	padding: 0px 20px;
+	text-align: left;
+}
+
+.design-solution-wave {
+	width: 333px;
+	height: 333px;
 }
 
 .landing .client {
@@ -977,24 +998,66 @@ h6 {
 	font-size: 12px;
 }
 
-.health_care_wrapper {
+.health-care-wrapper {
 	padding-top: 0px;
+}
+
+.health-care-wrapper .health-card-wrapper .health-care-card {
+	width: 320px;
+	height: 338px;
+	padding-top: 55px;
+	padding-bottom: 30px;
+}
+
+.health-care-wrapper .health-card-wrapper .health-care-image .logo {
+	height: 63px;
+	width: 75px;
+}
+
+.health-care-wrapper .health-card-wrapper .card-title {
+	line-height: 26px;
+	font-size: 20px;
+}
+
+.health-care-wrapper .health-card-wrapper .card-description {
+	margin-left: 20px;
+	margin-right: 22px;
+	line-height: 26px;
+	font-size: 14px;
+	margin-top: 10px;
+	width: 278px;
+	height: 127px;
+}
+
+.health-care-wrapper .health-care-details {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.health-care-wrapper .health-care-details .title {
+	font-size: 16px;
+}
+
+.health-care-wrapper .health-care-details .description {
+	margin-top: 6px;
+	font-size: 14px;
+	line-height: 26px;
 }
 
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
 
-.introduction_wrapper .introductionTittle {
+.introduction-wrapper .introduction-tittle {
 	line-height: 50px;
 	width: 242px;
 	height: 46px;
 	font-size: 32px;
-	padding-top: 89px;
+	margin-top: 89px;
 	padding-left: 20px;
 }
 
-.introduction_wrapper .introductionConent {
+.introduction-wrapper .introduction-conent {
 	width: 319px;
 	height: 156px;
 	font-size: 14px;
@@ -1006,13 +1069,13 @@ h6 {
 
 @media (min-width: 300px) and (max-width: 360px) {
 
-.introduction_wrapper .img2 {
+.introduction-wrapper .img2 {
 	width: 328px;
 	top: 36%;
 	left: 37%;
 }
 
-.introduction_wrapper .img4 {
+.introduction-wrapper .img4 {
 	width: 423px;
 	top: 43%;
 	left: -20%;
@@ -1027,6 +1090,16 @@ h6 {
 	left: 30px;
 	bottom: 11%;
 	flex-wrap: wrap;
+}
+
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+
+.health-care-wrapper {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 }
@@ -1142,13 +1215,13 @@ h6 {
 
 @media (min-width: 360px) and (max-width: 400px) {
 
-.introduction_wrapper .img2 {
+.introduction-wrapper .img2 {
 	width: 328px;
 	top: 36%;
 	left: 37%;
 }
 
-.introduction_wrapper .img4 {
+.introduction-wrapper .img4 {
 	width: 423px;
 	top: 43%;
 	left: -20%;
@@ -1171,16 +1244,16 @@ h6 {
 
 @media (min-width: 400px) and (max-width: 500px) {
 
-.introduction_wrapper .introductionTittle {
+.introduction-wrapper .introduction-tittle {
 	line-height: 50px;
 	width: 260px;
 	height: 60px;
 	font-size: 40px;
-	padding-top: 89px;
+	margin-top: 89px;
 	padding-left: 30px;
 }
 
-.introduction_wrapper .introductionConent {
+.introduction-wrapper .introduction-conent {
 	width: 320px;
 	height: 166px;
 	font-size: 14px;
@@ -1188,25 +1261,25 @@ h6 {
 	line-height: 26px;
 }
 
-.introduction_wrapper .img1_1 {
+.introduction-wrapper .img1-1 {
 	width: 450px;
 	top: 60%;
 	left: 30%;
 }
 
-.introduction_wrapper .img1_2 {
+.introduction-wrapper .img1-2 {
 	width: 316px;
 	top: 73%;
 	left: 14%;
 }
 
-.introduction_wrapper .img2 {
+.introduction-wrapper .img2 {
 	width: 348px;
 	top: 38%;
 	left: 45%;
 }
 
-.introduction_wrapper .img4 {
+.introduction-wrapper .img4 {
 	width: 430px;
 	top: 45%;
 	left: -16%;
@@ -1264,39 +1337,39 @@ h6 {
 
 @media (min-width: 500px) and (max-width: 650px) {
 
-.introduction_wrapper .introductionTittle {
+.introduction-wrapper .introduction-tittle {
 	padding-left: 70px;
 	line-height: 50px;
 	width: 260px;
 	height: 60px;
 	font-size: 40px;
-	padding-top: 89px;
+	margin-top: 89px;
 }
 
-.introduction_wrapper .introductionConent {
+.introduction-wrapper .introduction-conent {
 	padding-left: 70px;
 	width: 405px;
 	font-size: 16px;
 }
 
-.introduction_wrapper .img1_1 {
+.introduction-wrapper .img1-1 {
 	width: 484px;
 	top: 66%;
 	left: 38%;
 }
 
-.introduction_wrapper .img1_2 {
+.introduction-wrapper .img1-2 {
 	top: 78%;
 	left: 40%;
 }
 
-.introduction_wrapper .img2 {
+.introduction-wrapper .img2 {
 	width: 392px;
 	top: 40%;
 	left: 52%;
 }
 
-.introduction_wrapper .img4 {
+.introduction-wrapper .img4 {
 	width: 495px;
 	top: 47%;
 	left: -7%;
@@ -1342,77 +1415,93 @@ h6 {
 
 @media (min-width: 650px) and (max-width: 770px) {
 
-.introduction_wrapper .container {
+.introduction-wrapper .container {
 	min-height: 940px;
 }
 
-.introduction_wrapper .introduction {
+.introduction-wrapper .introduction {
 	min-height: 940px;
 }
 
-.introduction_wrapper .introductionTittle {
+.introduction-wrapper .introduction-tittle {
 	font-size: 48px;
 }
 
-.introduction_wrapper .introductionConent {
+.introduction-wrapper .introduction-conent {
 	font-size: 16px;
 }
 
-.introduction_wrapper .img1 {
+.introduction-wrapper .img1 {
 	width: 691px;
 	top: 16%;
 	left: -8%;
 }
 
-.introduction_wrapper .img2 {
+.introduction-wrapper .img2 {
 	width: 628px;
 	top: 34%;
 	left: 67%;
 }
 
-.introduction_wrapper .img3 {
+.introduction-wrapper .img3 {
 	width: 422px;
 	top: 11%;
 	left: 62%;
 }
 
-.introduction_wrapper .img4 {
+.introduction-wrapper .img4 {
 	width: 772px;
 	top: 44%;
 	left: 3%;
 }
 
-.introduction_wrapper .img5 {
+.introduction-wrapper .img5 {
 	width: 388px;
 	top: 70%;
 	left: 78%;
 }
 
-.designsolution .main {
-	left: 68%;
+.challenge-section-wrapper .des {
+	flex-direction: column;
 }
 
-.designsolution .tittle {
+.challenge-section-wrapper .challenge-section .challenge-img img {
+	width: 417px;
+	height: 417px;
+	top: 135px;
+}
+
+.design-solution-content {
+	margin-top: 147px;
+}
+
+.design-solution-tittle {
 	font-size: 48px;
 }
 
-.designsolution .subTittle {
+.design-solution-subTittle {
 	font-size: 21px;
 }
 
-.designsolution .description {
+.design-solution-description {
 	font-size: 14px;
+}
+
+.health-care-wrapper .health-card-wrapper .health-care-card {
+	width: 380px;
+	padding-top: 60px;
+	padding-bottom: 65px;
 }
 
 }
 
 @media (min-width: 650px) and (max-width: 1466px) {
 
-.introduction_wrapper .img1_1 {
+.introduction-wrapper .img1-1 {
 	display: none;
 }
 
-.introduction_wrapper .img1_2 {
+.introduction-wrapper .img1-2 {
 	display: none;
 }
 
@@ -1420,8 +1509,17 @@ h6 {
 
 @media (min-width: 650px) and (max-width: 1400px) {
 
-.designsolution .content {
+.design-solution-content {
 	justify-content: center;
+}
+
+}
+
+@media (min-width: 650px) and (max-width: 700px) {
+
+.design-solution-wave {
+	width: 662px;
+	height: 662px;
 }
 
 }
@@ -1479,6 +1577,15 @@ h6 {
 
 }
 
+@media (min-width: 650px) and (max-width: 1168px) {
+
+.health-care-wrapper .health-card-wrapper .health-care-image .logo {
+	height: 86px;
+	width: 105px;
+}
+
+}
+
 @media (min-width: 651px) and (max-width: 774px) {
 
 .testimonial .dots-background .container {
@@ -1501,6 +1608,15 @@ h6 {
 .testimonial .dots-background .container .card .card-content .card-description .description-content {
 	font-size: 18px;
 	line-height: 35px;
+}
+
+}
+
+@media (min-width: 700px) and (max-width: 770px) {
+
+.design-solution-wave {
+	width: 720px;
+	height: 720px;
 }
 
 }
@@ -1669,62 +1785,79 @@ h6 {
 
 @media (min-width: 770px) and (max-width: 1024px) {
 
-.introduction_wrapper .container {
+.introduction-wrapper .container {
 	min-height: 1022px;
 }
 
-.introduction_wrapper .introduction {
+.introduction-wrapper .introduction {
 	min-height: 1022px;
 }
 
-.introduction_wrapper .introductionTittle {
+.introduction-wrapper .introduction-tittle {
 	font-size: 56px;
 }
 
-.introduction_wrapper .introductionConent {
+.introduction-wrapper .introduction-conent {
 	font-size: 18px;
 }
 
-.introduction_wrapper .img1 {
+.introduction-wrapper .img1 {
 	width: 795px;
 	top: 20%;
 	left: 1%;
 }
 
-.introduction_wrapper .img2 {
+.introduction-wrapper .img2 {
 	width: 850px;
 	top: 36%;
 	left: 62%;
 }
 
-.introduction_wrapper .img3 {
+.introduction-wrapper .img3 {
 	width: 493px;
 	top: 14%;
 	left: 61%;
 }
 
-.introduction_wrapper .img4 {
+.introduction-wrapper .img4 {
 	width: 953px;
 	top: 48%;
 	left: 3%;
 }
 
-.introduction_wrapper .img5 {
+.introduction-wrapper .img5 {
 	width: 460px;
 	top: 79%;
 	left: 77%;
 }
 
-.designsolution .tittle {
+.challenge-section-wrapper .challenge-section .challenge-img img {
+	width: 370px;
+	height: 370px;
+	top: 130px;
+}
+
+.design-solution-tittle {
 	font-size: 52px;
 }
 
-.designsolution .subTittle {
+.design-solution-subTittle {
 	font-size: 24px;
 }
 
-.designsolution .description {
+.design-solution-description {
 	font-size: 16px;
+}
+
+.design-solution-wave {
+	width: 792px;
+	height: 792px;
+}
+
+.health-care-wrapper .health-card-wrapper .health-care-card {
+	width: 405px;
+	padding-top: 35px;
+	padding-bottom: 40px;
 }
 
 }
@@ -1756,11 +1889,11 @@ h6 {
 
 @media (min-width: 992px) {
 
-.challenge_section_wrapper .challenge_section .title {
+.challenge-section-wrapper .challenge-section .title {
 	font-size: 48px !important;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_img {
+.challenge-section-wrapper .challenge-section .challenge-img {
 	width: 409px;
 	height: 447px;
 	padding-left: 59px;
@@ -1770,46 +1903,57 @@ h6 {
 
 @media (min-width: 1024px) and (max-width: 1230px) {
 
-.introduction_wrapper .img1 {
+.introduction-wrapper .img1 {
 	width: 890px;
 	top: 14%;
 	left: 7%;
 }
 
-.introduction_wrapper .img2 {
+.introduction-wrapper .img2 {
 	width: 948px;
 	top: 32%;
 	left: 60%;
 }
 
-.introduction_wrapper .img3 {
+.introduction-wrapper .img3 {
 	width: 590px;
 	top: 13%;
 	left: 67%;
 }
 
-.introduction_wrapper .img4 {
+.introduction-wrapper .img4 {
 	width: 1100px;
 	top: 45%;
 	left: 3%;
 }
 
-.introduction_wrapper .img5 {
+.introduction-wrapper .img5 {
 	width: 520px;
 	top: 71%;
 	left: 70%;
 }
 
-.designsolution .tittle {
+.challenge-section-wrapper .challenge-section .challenge-img img {
+	width: 390px;
+	height: 390px;
+	top: 130px;
+}
+
+.design-solution-tittle {
 	font-size: 60px;
 }
 
-.designsolution .subTittle {
+.design-solution-subTittle {
 	font-size: 27px;
 }
 
-.designsolution .description {
+.design-solution-description {
 	font-size: 18px;
+}
+
+.design-solution-wave {
+	width: 792px;
+	height: 792px;
 }
 
 }
@@ -1886,11 +2030,11 @@ h6 {
 
 @media (min-width: 1165px) {
 
-.challenge_section_wrapper .challenge_section .title {
+.challenge-section-wrapper .challenge-section .title {
 	font-size: 54px !important;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_img {
+.challenge-section-wrapper .challenge-section .challenge-img {
 	width: 409px;
 	height: 447px;
 	padding-left: 92px;
@@ -2031,24 +2175,12 @@ html {
 
 @media (max-width: 1280px) {
 
-.health_care_wrapper .health_care_details .title {
+.health-care-wrapper .health-care-details .title {
 	margin-top: 10px;
 }
 
-.health_care_wrapper .health_care_details .description {
+.health-care-wrapper .health-care-details .description {
 	font-size: 18px;
-}
-
-.health_care_wrapper .health_card_wrapper .card_title {
-	font-size: 24px;
-	line-height: 32px;
-	letter-spacing: 0.16px;
-	margin-top: 59px;
-}
-
-.health_care_wrapper .health_card_wrapper .card_description {
-	font-size: 19px;
-	margin-top: 16px;
 }
 
 .project_cards_wrapper {
@@ -2059,17 +2191,17 @@ html {
 
 @media (max-width: 1200px) {
 
-.challenge_section_wrapper .challenge_section .title {
+.challenge-section-wrapper .challenge-section .title {
 	font-size: 54px !important;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_img {
+.challenge-section-wrapper .challenge-section .challenge-img {
 	width: 409px;
 	height: 447px;
 	padding-left: 92px;
 }
 
-.health_care_wrapper .health_card_wrapper {
+.health-care-wrapper .health-card-wrapper {
 	margin-top: 36px;
 	margin-left: 100px;
 }
@@ -2078,38 +2210,29 @@ html {
 
 @media (max-width: 1200px) and (max-width: 992px) {
 
-.health_care_wrapper .health_card_wrapper {
+.health-care-wrapper .health-card-wrapper {
 	margin-top: 36px;
 	margin-bottom: 64px;
 	margin-left: 100px;
-}
-
-.health_care_wrapper .health_care_details {
-	margin-left: 70px;
-	margin-right: 70px;
 }
 
 }
 
 @media (max-width: 1200px) and (max-width: 992px) and (max-width: 900px) {
 
-.health_care_wrapper .health_card_wrapper {
-	margin: 0 auto 20px;
+.health-care-wrapper .health-card-wrapper {
+	margin: 20px;
 }
 
 }
 
 @media (max-width: 1200px) and (max-width: 992px) and (max-width: 900px) and (max-width: 768px) {
 
-.health_care_wrapper .health_card_wrapper .health_care_card .health_care_image .logo {
-	height: 80px;
-}
-
-.health_care_wrapper .health_card_wrapper .health_care_card .card_title {
+.health-care-wrapper .health-card-wrapper .health-care-card .card-title {
 	margin-top: 30px;
 }
 
-.health_care_wrapper .health_card_wrapper .health_care_card .card_description {
+.health-care-wrapper .health-card-wrapper .health-care-card .card-description {
 	font-size: 16px;
 }
 
@@ -2117,11 +2240,11 @@ html {
 
 @media (max-width: 1164px) {
 
-.challenge_section_wrapper .challenge_section .title {
+.challenge-section-wrapper .challenge-section .title {
 	font-size: 48px !important;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_img {
+.challenge-section-wrapper .challenge-section .challenge-img {
 	width: 409px;
 	height: 447px;
 	padding-left: 59px;
@@ -2143,26 +2266,26 @@ html {
 
 @media (max-width: 992px) {
 
-.challenge_section_wrapper .challenge_section .title {
+.challenge-section-wrapper .challenge-section .title {
 	font-size: 48px !important;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_img {
+.challenge-section-wrapper .challenge-section .challenge-img {
 	width: 405px;
 	height: 451px;
 	padding-left: 36px;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_desc_col {
+.challenge-section-wrapper .challenge-section .challenge-desc-col {
 	padding-top: 148px;
 }
 
-.health_care_wrapper .health_care_details .title {
+.health-care-wrapper .health-care-details .title {
 	margin-top: 10px;
 	font-size: 18px;
 }
 
-.health_care_wrapper .health_care_details .description {
+.health-care-wrapper .health-care-details .description {
 	font-size: 16px;
 }
 
@@ -2269,15 +2392,15 @@ html {
 
 @media (max-width: 899px) {
 
-.challenge_section_wrapper .challenge_section .challenge_desc_col {
+.challenge-section-wrapper .challenge-section .challenge-desc-col {
 	padding-top: 148px;
 }
 
-.challenge_section_wrapper .challenge_section .title {
+.challenge-section-wrapper .challenge-section .title {
 	font-size: 48px !important;
 }
 
-.challenge_section_wrapper .challenge_section .challenge_img {
+.challenge-section-wrapper .challenge-section .challenge-img {
 	width: auto;
 	height: auto;
 	padding-left: 0px;

@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/styles/sass/_designsolution.scss' ?>">
 <?php
     $args = array(
         'post_type' => 'case_study',
@@ -8,22 +7,24 @@
     $query = new WP_Query( $args );
     if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
     ?>
-<div class="designsolution">
-                <!-- <div class="main">
-                    <div className={`${styles.wave" ${styles.wave1"`"></div>
+<div class="design-solution">
+                <div class="design-solution-main">
+                <img src="<?php echo get_template_directory_uri(); ?>/css/images/wave.png" class = "design-solution-wave" alt="backgroundimg"/>
+
+                    <!-- <div className={`${styles.wave" ${styles.wave1"`"></div>
                     <div className={`${styles.wave" ${styles.wave2"`"></div>
-                    <div className={`${styles.wave" ${styles.wave3"`"></div>
-                </div> -->
-                <div class="cointainer">
-                    <div class="content">
-                        <div class="tittle">
+                    <div className={`${styles.wave" ${styles.wave3"`"></div> -->
+                </div>
+                <div class="design-solution-cointainer">
+                    <div class="design-solution-content">
+                        <div class="design-solution-tittle">
                         <?php  echo get_field('design-solution-title1') ?> 
                             <div>
                             <?php  echo get_field('design-solution-title2') ?> 
                                 </div>
                             </div>
-                        <div class="subTittle"> <?php  echo get_field('design-solution-subtitle') ?> </div>
-                        <div class="description">
+                        <div class="design-solution-subTittle"> <?php  echo get_field('design-solution-subtitle') ?> </div>
+                        <div class="design-solution-description">
                         <?php  echo get_field('design-solution-content') ?> </div>
                     </div>
                 </div>
