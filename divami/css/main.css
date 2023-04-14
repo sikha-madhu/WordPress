@@ -568,7 +568,7 @@ h6 {
 	position: relative;
 	height: calc(100vh - 60px);
 	max-width: 100%;
-	background-image: url("../../../../public/svg/wave_background.svg");
+	background-image: url("./images/wave_background.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -579,12 +579,11 @@ h6 {
 	padding-left: 70px;
 }
 
-.landing .client .client_title {
+.landing .client .client-title h4 {
+	font-family: "GraphikRegular";
+	font-weight: 300;
 	padding-top: 120px;
 	overflow: hidden;
-}
-
-.landing .client .client_title h4 {
 	font-size: 24px;
 	line-height: 26px;
 	color: #202124;
@@ -592,13 +591,12 @@ h6 {
 	animation: slide-right-text 200ms ease-in-out 0s 1 forwards;
 }
 
-.landing .client .client_moto {
+.landing .client .client-moto h2 {
+	font-family: "GraphikRegular";
+	font-weight: 300;
 	margin-top: 21px;
 	margin-bottom: 16px;
 	overflow: hidden;
-}
-
-.landing .client .client_moto h2 {
 	font-size: 52px;
 	line-height: 57px;
 	letter-spacing: 0.02em;
@@ -608,7 +606,7 @@ h6 {
 	animation: slide-right-text 460ms ease-in-out 200ms 1 forwards;
 }
 
-.landing .client .client_custom_line {
+.landing .client .client-custom-line {
 	max-width: 198px;
 	height: 0px;
 	border: 1px solid #a8abb7;
@@ -617,7 +615,7 @@ h6 {
 	animation: slide-right 200ms ease-in 500ms 1 forwards;
 }
 
-.landing .client .client_services {
+.landing .client .client-services {
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -626,56 +624,58 @@ h6 {
 	animation: slide-right-text 250ms ease-in-out 600ms 1 forwards;
 }
 
-.landing .client .client_services .item {
+.landing .client .client-services .item {
 	display: flex;
 	align-items: center;
 	gap: 4px;
 }
 
-.landing .client .client_services .item .item_circle {
+.landing .client .client-services .item .item-circle {
 	background: #a7abb7;
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
 }
 
-.landing .client .client_services .item .item_content {
+.landing .client .client-services .item .item-content {
+	font-family: "GraphikRegular";
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 0.02em;
-	color: #202124;
+	color: #232323;
 }
 
-.landing .client .client_services .item_mobile {
+.landing .client .client-services .item-mobile {
 	display: flex;
 	align-items: center;
 	gap: 4px;
 }
 
-.landing .client .client_services .item_mobile .item_circle {
+.landing .client .client-services .item-mobile .item-circle {
 	background: #a7abb7;
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
 }
 
-.landing .client .client_services .item_mobile .item_content {
+.landing .client .client-services .item-mobile .item-content {
+	font-family: "GraphikRegular";
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 0.02em;
-	color: #202124;
+	color: #232323;
 }
 
-.landing .client .client_services .item_circle_1 {
+.landing .client .client-services .item-circle-1 {
 	background: #a7abb7;
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
 }
 
-.landing .custom_sphere {
+.landing .custom-sphere {
 	position: absolute;
 	top: 68%;
 	left: 0;
@@ -697,7 +697,7 @@ h6 {
 	bottom: 7%;
 }
 
-.landing .performances .performance_area {
+.landing .performances .performance-area {
 	display: flex;
 	align-items: center;
 	gap: 12px;
@@ -705,32 +705,39 @@ h6 {
 	animation: slide-up 200ms linear forwards 2000ms;
 }
 
-.landing .performances .performance_area .icon {
+.landing .performances .performance-area .icon {
 	padding-bottom: 23px;
 }
 
-.landing .performances .performance_area .icon_reverse {
+.landing .performances .performance-area .icon-reverse {
 	transform: rotate(-180deg);
 	padding-top: 23px;
 }
 
-.landing .performances .performance_area .content {
+.landing .performances .performance-area .content {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
 }
 
-.landing .performances .performance_area .content .counter {
+.landing .performances .performance-area .content .counter {
+	font-family: "GraphikRegular";
+	font-weight: 300;
 	font-size: 64px;
 	line-height: 70px;
 	color: #232323;
+	display: flex;
+	flex-wrap: nowrap;
 }
 
-.landing .performances .performance_area .content .counter span:nth-child(2) {
+.landing .performances .performance-area .content .counter span:nth-child(2) {
+	font-family: "GraphikRegular";
+	font-weight: 300;
 	font-size: 46px;
 }
 
-.landing .performances .performance_area .content .name {
+.landing .performances .performance-area .content .name {
+	font-family: "GraphikRegular";
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 18px;
@@ -909,70 +916,65 @@ h6 {
 }
 
 .landing .client {
-	padding-left: 25px;
+	padding-left: 20px;
 }
 
-.landing .client .client_title {
+.landing .client .client-title h4 {
 	padding-top: 50px;
-}
-
-.landing .client .client_title h4 {
 	font-size: 14px;
 	line-height: 16px;
 }
 
-.landing .client .client_moto {
-	margin: 0;
-}
-
-.landing .client .client_moto h2 {
+.landing .client .client-moto h2 {
 	font-size: 32px;
 	line-height: 46px;
+	margin: 0;
 	margin-top: 20px;
 	margin-bottom: 12px;
 	font-weight: 300;
+	color: #232323;
 }
 
-.landing .client .client_custom_line {
+.landing .client .client-custom-line {
 	max-width: 99px;
 	height: 0px;
 	margin-bottom: 16px;
 }
 
-.landing .client .client_services .item .item_content {
+.landing .client .client-services .item .item-content {
 	font-size: 14px;
 	line-height: 20px;
 }
 
-.landing .client .client_services .item_mobile {
+.landing .client .client-services .item-mobile {
 	display: none;
 }
 
-.landing .client .client_services .item_mobile .item_content {
+.landing .client .client-services .item-mobile .item-content {
 	font-size: 14px;
 	line-height: 20px;
 }
 
-.landing .performances .performance_area .icon .img {
+.landing .performances .performance-area .icon .img {
 	height: 27px;
 }
 
-.landing .performances .performance_area .icon_reverse .img {
+.landing .performances .performance-area .icon-reverse .img {
 	height: 23px;
 }
 
-.landing .performances .performance_area .content .counter {
-	font-size: 32px;
+.landing .performances .performance-area .content .counter {
+	font-size: 24px;
 	line-height: 35px;
 }
 
-.landing .performances .performance_area .content .counter span:nth-child(2) {
+.landing .performances .performance-area .content .counter span:nth-child(2) {
 	font-size: 20px;
 	line-height: 22px;
 }
 
-.landing .performances .performance_area .content .name {
-	font-size: 14px;
+.landing .performances .performance-area .content .name {
+	font-size: 12px;
 }
 
 .health_care_wrapper {
@@ -1162,6 +1164,7 @@ h6 {
 
 .landing {
 	height: calc(100vh - 7px);
+	background-image: url("./images/wave_background_mobile.svg");
 }
 
 }
@@ -1214,9 +1217,9 @@ h6 {
 @media (min-width: 450px) and (max-width: 650px) {
 
 .landing .performances {
-	gap: 40px;
-	left: 70px;
-	bottom: 12%;
+	gap: 20px;
+	left: 83px;
+	bottom: 11%;
 	flex-wrap: wrap;
 }
 
@@ -1246,6 +1249,15 @@ h6 {
 	line-height: 46px;
 	height: 46px;
 	padding: 10px 0 25px 0;
+}
+
+}
+
+@media (min-width: 493px) and (max-width: 614px) {
+
+.landing .performances {
+	left: 65px;
+	bottom: 7%;
 }
 
 }
@@ -1304,10 +1316,26 @@ h6 {
 
 }
 
+@media (min-width: 597px) and (max-width: 610px) {
+
+.landing .performances {
+	bottom: 9%;
+}
+
+}
+
 @media (min-width: 600px) {
 
-.landing .client .client_moto h2 {
+.landing .client .client-moto h2 {
 	font-size: 32px;
+}
+
+}
+
+@media (min-width: 617px) and (max-width: 623px) {
+
+.landing .performances {
+	bottom: 5%;
 }
 
 }
@@ -1425,19 +1453,19 @@ h6 {
 	gap: 30px;
 }
 
-.landing .performances .performance_area .icon .img {
+.landing .performances .performance-area .icon .img {
 	height: 25px;
 }
 
-.landing .performances .performance_area .icon_reverse .img {
+.landing .performances .performance-area .icon-reverse .img {
 	height: 25px;
 }
 
-.landing .performances .performance_area .content .counter {
+.landing .performances .performance-area .content .counter {
 	font-size: 32px;
 }
 
-.landing .performances .performance_area .content .counter span:nth-child(2) {
+.landing .performances .performance-area .content .counter span:nth-child(2) {
 	font-size: 23px;
 }
 
@@ -1445,7 +1473,7 @@ h6 {
 
 @media (min-width: 650px) and (max-width: 1460px) {
 
-.landing .client .client_services .item_circle_1 {
+.landing .client .client-services .item-circle-1 {
 	display: none;
 }
 
@@ -1499,7 +1527,7 @@ h6 {
 
 @media (min-width: 768px) {
 
-.landing .client .client_moto h2 {
+.landing .client .client-moto h2 {
 	font-size: 35px;
 }
 
@@ -1509,24 +1537,132 @@ h6 {
 	bottom: 16%;
 }
 
-.landing .performances .performance_area .icon .img {
+.landing .performances .performance-area .icon .img {
 	height: 27px;
 }
 
-.landing .performances .performance_area .icon_reverse .img {
+.landing .performances .performance-area .icon-reverse .img {
 	height: 27px;
 }
 
-.landing .performances .performance_area .content .counter {
+.landing .performances .performance-area .content .counter {
 	font-size: 40px;
 }
 
-.landing .performances .performance_area .content .counter span:nth-child(2) {
+.landing .performances .performance-area .content .counter span:nth-child(2) {
 	font-size: 30px;
 }
 
-.landing .performances .performance_area .content .name {
+.landing .performances .performance-area .content .name {
 	font-size: 11px;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 360px) {
+
+.landing .custom-sphere {
+	width: 79px;
+	height: 79px;
+	animation: movement-of-ball-360 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 480px) {
+
+.landing .custom-sphere {
+	width: 100px;
+	height: 100px;
+	animation: movement-of-ball-480 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 650px) {
+
+.landing .custom-sphere {
+	width: 150px;
+	height: 150px;
+	animation: movement-of-ball-650 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 768px) {
+
+.landing .custom-sphere {
+	width: 150px;
+	height: 150px;
+	animation: movement-of-ball-768 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 848px) {
+
+.landing .custom-sphere {
+	width: 150px;
+	height: 150px;
+	animation: movement-of-ball-848 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 960px) {
+
+.landing .custom-sphere {
+	width: 150px;
+	height: 150px;
+	animation: movement-of-ball-960 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 1024px) {
+
+.landing .custom-sphere {
+	width: 150px;
+	height: 150px;
+	animation: movement-of-ball-1024 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 1152px) {
+
+.landing .custom-sphere {
+	width: 150px;
+	height: 150px;
+	animation: movement-of-ball-1152 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 1280px) {
+
+.landing .custom-sphere {
+	width: 150px;
+	height: 150px;
+	animation: movement-of-ball-1280 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 1366px) {
+
+.landing .custom-sphere {
+	width: 150px;
+	height: 150px;
+	animation: movement-of-ball-1366 2s linear forwards 1s;
+}
+
+}
+
+@media (min-height: 768px) and (max-height: 768px) and (min-width: 1367px) {
+
+.landing .custom-sphere {
+	animation: none;
 }
 
 }
@@ -1696,7 +1832,7 @@ h6 {
 
 @media (min-width: 1024px) {
 
-.landing .client .client_moto h2 {
+.landing .client .client-moto h2 {
 	font-size: 40px;
 }
 
@@ -1706,23 +1842,23 @@ h6 {
 	bottom: 11%;
 }
 
-.landing .performances .performance_area .icon .img {
+.landing .performances .performance-area .icon .img {
 	height: 32px;
 }
 
-.landing .performances .performance_area .icon_reverse .img {
+.landing .performances .performance-area .icon-reverse .img {
 	height: 32px;
 }
 
-.landing .performances .performance_area .content .counter {
+.landing .performances .performance-area .content .counter {
 	font-size: 50px;
 }
 
-.landing .performances .performance_area .content .counter span:nth-child(2) {
+.landing .performances .performance-area .content .counter span:nth-child(2) {
 	font-size: 46px;
 }
 
-.landing .performances .performance_area .content .name {
+.landing .performances .performance-area .content .name {
 	font-size: 12px;
 }
 
@@ -1846,14 +1982,6 @@ html {
 
 }
 
-@media (min-width: 1280px) {
-
-.landing .custom_sphere {
-	animation: movement-of-ball-1280 2s linear forwards 1s;
-}
-
-}
-
 @media (min-width: 1366px) and (max-width: 1440px) {
 
 .testimonial .dots-background .title .h2-tag {
@@ -1864,12 +1992,8 @@ html {
 
 @media (min-width: 1366px) {
 
-.landing .client .client_moto h2 {
+.landing .client .client-moto h2 {
 	font-size: 52px;
-}
-
-.landing .custom_sphere {
-	animation: movement-of-ball-1366 2s linear forwards 1s;
 }
 
 .landing .performances {
@@ -1878,19 +2002,19 @@ html {
 	bottom: 100px;
 }
 
-.landing .performances .performance_area .icon .img {
+.landing .performances .performance-area .icon .img {
 	height: 100%;
 }
 
-.landing .performances .performance_area .icon_reverse .img {
+.landing .performances .performance-area .icon-reverse .img {
 	height: 100%;
 }
 
-.landing .performances .performance_area .content .counter {
+.landing .performances .performance-area .content .counter {
 	font-size: 64px;
 }
 
-.landing .performances .performance_area .content .name {
+.landing .performances .performance-area .content .name {
 	font-size: 16px;
 }
 
@@ -2599,7 +2723,203 @@ to {
 
 }
 
-@keyframes movement-of-ball {
+@keyframes slide-up {
+
+0% {
+	transform: translateY(100%);
+	opacity: 1;
+}
+
+100% {
+	transform: translateY(0%);
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-360 {
+
+0% {
+	opacity: 1;
+	transform: translateX(0px) translateY(-10vh);
+}
+
+50% {
+	transform: translateX(40vw) translateY(-13vh);
+	opacity: 1;
+}
+
+100% {
+	transform: translateX(calc(100vw - 79px)) translateY(calc(597px - 100vh));
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-480 {
+
+0% {
+	opacity: 1;
+	transform: translateX(0px) translateY(-8vh);
+}
+
+25% {
+	transform: translateX(25vw) translateY(-9vh);
+	opacity: 1;
+}
+
+50% {
+	transform: translateX(40vw) translateY(-13vh);
+	opacity: 1;
+}
+
+100% {
+	transform: translateX(calc(100vw - 100px)) translateY(calc(575px - 100vh));
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-650 {
+
+0% {
+	opacity: 1;
+	transform: translateX(0px) translateY(-7vh);
+}
+
+25% {
+	transform: translateX(25vw) translateY(-10vh);
+	opacity: 1;
+}
+
+50% {
+	transform: translateX(40vw) translateY(-15vh);
+	opacity: 1;
+}
+
+100% {
+	transform: translateX(calc(100vw - 150px)) translateY(calc(545px - 100vh));
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-768 {
+
+0% {
+	opacity: 1;
+	transform: translateX(0px) translateY(-13vh);
+}
+
+50% {
+	transform: translateX(50vw) translateY(-23vh);
+	opacity: 1;
+}
+
+100% {
+	transform: translateX(calc(100vw - 150px)) translateY(calc(500px - 100vh));
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-848 {
+
+0% {
+	opacity: 1;
+	transform: translateX(0px) translateY(-13vh);
+}
+
+25% {
+	transform: translateX(25vw) translateY(-18vh);
+	opacity: 1;
+}
+
+50% {
+	transform: translateX(50vw) translateY(-21vh);
+	opacity: 1;
+}
+
+100% {
+	transform: translateX(calc(100vw - 150px)) translateY(calc(476px - 100vh));
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-960 {
+
+0% {
+	opacity: 1;
+	transform: translateX(0px) translateY(-13vh);
+}
+
+25% {
+	transform: translateX(25vw) translateY(-15vh);
+	opacity: 1;
+}
+
+50% {
+	transform: translateX(50vw) translateY(-22vh);
+	opacity: 1;
+}
+
+100% {
+	transform: translateX(calc(100vw - 150px)) translateY(calc(465px - 100vh));
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-1024 {
+
+0% {
+	opacity: 1;
+	transform: translateX(0px) translateY(-10vh);
+}
+
+25% {
+	transform: translateX(25vw) translateY(-15vh);
+	opacity: 1;
+}
+
+50% {
+	transform: translateX(50vw) translateY(-22vh);
+	opacity: 1;
+}
+
+100% {
+	transform: translateX(calc(100vw - 150px)) translateY(calc(450px - 100vh));
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-1152 {
+
+0% {
+	opacity: 1;
+	transform: translateX(0px) translateY(-6vh);
+}
+
+25% {
+	transform: translateX(25vw) translateY(-15vh);
+	opacity: 1;
+}
+
+50% {
+	transform: translateX(50vw) translateY(-22vh);
+	opacity: 1;
+}
+
+100% {
+	transform: translateX(calc(100vw - 150px)) translateY(calc(418px - 100vh));
+	opacity: 1;
+}
+
+}
+
+@keyframes movement-of-ball-1263 {
 
 0% {
 	opacity: 1;
@@ -2615,27 +2935,8 @@ to {
 	opacity: 1;
 }
 
-75% {
-	transform: translateX();
-	opacity: 1;
-}
-
 100% {
-	transform: translateX(calc(100vw - 150px)) translateY(calc(150px - 92vh));
-	opacity: 1;
-}
-
-}
-
-@keyframes slide-up {
-
-0% {
-	transform: translateY(100%);
-	opacity: 1;
-}
-
-100% {
-	transform: translateY(0%);
+	transform: translateX(calc(100vw - 126px)) translateY(calc(255px - 100vh));
 	opacity: 1;
 }
 
@@ -2657,12 +2958,8 @@ to {
 	opacity: 1;
 }
 
-75% {
-	opacity: 1;
-}
-
 100% {
-	transform: translateX(calc(100vw - 150px)) translateY(calc(150px - 92vh));
+	transform: translateX(calc(100vw - 150px)) translateY(calc(395px - 100vh));
 	opacity: 1;
 }
 
@@ -2684,12 +2981,8 @@ to {
 	opacity: 1;
 }
 
-75% {
-	opacity: 1;
-}
-
 100% {
-	transform: translateX(calc(100vw - 150px)) translateY(calc(450px - 100vh));
+	transform: translateX(calc(100vw - 150px)) translateY(calc(375px - 100vh));
 	opacity: 1;
 }
 

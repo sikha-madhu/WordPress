@@ -1,115 +1,131 @@
 
+
 .landing {
     position: relative;
     height: calc(100vh - 60px);
     max-width: 100%;
-    background-image: url("../../../../public/svg/wave_background.svg");
+    background-image: url("./images/wave_background.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    @include minMaxWidth(360,650){
+
+    @include minMaxWidth(360, 650) {
         height: calc(100vh - 7px);
+        background-image: url("./images/wave_background_mobile.svg");
     }
+
     .client {
         padding-left: 70px;
-        @include minMaxWidth(300,650){
-            padding-left: 25px;
+
+        @include minMaxWidth(300, 650) {
+            padding-left: 20px;
         }
-        .client_title {
+
+        .client-title h4{
+            font-family: $GraphikRegular;
+            font-weight: 300;
             padding-top: 120px;
             overflow: hidden;
-            @include minMaxWidth(300,650){
+            font-size: 24px;
+            line-height: 26px;
+            color: $textColor;
+            opacity: 0;
+            animation: slide-right-text 200ms ease-in-out 0s 1 forwards;
+
+            @include minMaxWidth(300, 650) {
                 padding-top: 50px;
-            }
-            h4 {
-                font-size: 24px;
-                line-height: 26px;
-                color: $textColor;
-                opacity: 0;
-                animation: slide-right-text 200ms ease-in-out 0s 1 forwards;
-                @include minMaxWidth (300,650){
-                    font-size: 14px;
-                    line-height: 16px;
-                }
+                font-size: 14px;
+                line-height: 16px;
             }
         }
-        .client_moto {
+
+        .client-moto h2{
+            font-family: $GraphikRegular;
+            font-weight: 300;
             margin-top: 21px;
             margin-bottom: 16px;
             overflow: hidden;
-            @include minMaxWidth(300,650){
-                margin: 0;
-            }
-            h2 {
-                font-size: 52px;
-                line-height: 57px;
-                letter-spacing: 0.02em;
-                text-transform: uppercase;
-                color: $textColor;
-                opacity: 0;
-                animation: slide-right-text 460ms ease-in-out 200ms 1 forwards;
-                @include minLayout(600){
-                    font-size: 32px;
-                }
-                @include minLayout(768){
-                    font-size: 35px;
-                }
-                @include minLayout(1024){
-                    font-size: 40px;
+            font-size: 52px;
+            line-height: 57px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $textColor;
+            opacity: 0;
+            animation: slide-right-text 460ms ease-in-out 200ms 1 forwards;
 
-                }
-                @include minLayout(1366){
-                    font-size: 52px;
-                }
-                @include minMaxWidth(300,650){
-                    font-size: 32px;
-                    line-height: 46px;
-                    margin-top: 20px;
-                    margin-bottom: 12px;
-                    font-weight: 300;
-                }
+            @include minLayout(600) {
+                font-size: 32px;
+            }
+
+            @include minLayout(768) {
+                font-size: 35px;
+            }
+
+            @include minLayout(1024) {
+                font-size: 40px;
+
+            }
+
+            @include minLayout(1366) {
+                font-size: 52px;
+            }
+
+            @include minMaxWidth(300, 650) {
+                font-size: 32px;
+                line-height: 46px;
+                margin: 0;
+                margin-top: 20px;
+                margin-bottom: 12px;
+                font-weight: 300;
+                color: $Black;
             }
         }
-        .client_custom_line {
+
+        .client-custom-line {
             max-width: 198px;
             height: 0px;
             border: 1px solid $borderColor;
             margin-bottom: 20px;
             opacity: 0;
             animation: slide-right 200ms ease-in 500ms 1 forwards;
-            @include minMaxWidth(300,650){
+
+            @include minMaxWidth(300, 650) {
                 max-width: 99px;
                 height: 0px;
                 margin-bottom: 16px;
             }
         }
-        .client_services {
+
+        .client-services {
             display: flex;
             align-items: center;
             gap: 10px;
             opacity: 0;
             overflow-x: hidden;
             animation: slide-right-text 250ms ease-in-out 600ms 1 forwards;
+
             .item {
                 display: flex;
                 align-items: center;
                 gap: 4px;
 
-                .item_circle{
+                .item-circle {
                     background: $gray1;
                     width: 6px;
                     height: 6px;
                     border-radius: 50%;
                 }
 
-                .item_content {
+                .item-content {
+                    font-family: $GraphikRegular;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
                     letter-spacing: 0.02em;
-                    color: $textColor;
-                    @include minMaxWidth(300,650){
+                    color: $Black;
+
+                    @include minMaxWidth(300, 650) {
                         font-size: 14px;
                         line-height: 20px;
 
@@ -118,47 +134,54 @@
 
 
             }
-            .item_mobile{
+
+            .item-mobile {
                 display: flex;
                 align-items: center;
                 gap: 4px;
-                @include minMaxWidth(300,650){
+
+                @include minMaxWidth(300, 650) {
                     display: none;
                 }
-                .item_circle{
+
+                .item-circle {
                     background: $gray1;
                     width: 6px;
                     height: 6px;
                     border-radius: 50%;
                 }
 
-                .item_content {
+                .item-content {
+                    font-family: $GraphikRegular;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
                     letter-spacing: 0.02em;
-                    color: $textColor;
-                    @include minMaxWidth(300,650){
+                    color: $Black;
+
+                    @include minMaxWidth(300, 650) {
                         font-size: 14px;
                         line-height: 20px;
 
                     }
                 }
             }
-            .item_circle_1 {
+
+            .item-circle-1 {
                 background: $gray1;
                 width: 6px;
                 height: 6px;
                 border-radius: 50%;
-                @include minMaxWidth(650,1460){
+
+                @include minMaxWidth(650, 1460) {
                     display: none;
                 }
             }
-            
+
         }
     }
 
-    .custom_sphere {
+    .custom-sphere {
         position: absolute;
         top: 68%;
         left: 0;
@@ -168,11 +191,71 @@
         border-radius: 50%;
         transform: rotate(22.88deg);
         opacity: 0;
-        @include minLayout(1280){
-            animation: movement-of-ball-1280 2s linear forwards 1s;
-        }
-        @include minLayout(1366){
-            animation: movement-of-ball-1366 2s linear forwards 1s;
+
+        @include minMaxHeight(768, 768) {
+            @include minLayout(360) {
+                width: 79px;
+                height: 79px;
+                animation: movement-of-ball-360 2s linear forwards 1s;
+            }
+
+            @include minLayout(480) {
+                width: 100px;
+                height: 100px;
+                animation: movement-of-ball-480 2s linear forwards 1s;
+            }
+
+            @include minLayout(650) {
+                width: 150px;
+                height: 150px;
+                animation: movement-of-ball-650 2s linear forwards 1s;
+            }
+
+            @include minLayout(768) {
+                width: 150px;
+                height: 150px;
+                animation: movement-of-ball-768 2s linear forwards 1s;
+            }
+
+            @include minLayout(848) {
+                width: 150px;
+                height: 150px;
+                animation: movement-of-ball-848 2s linear forwards 1s;
+            }
+
+            @include minLayout(960) {
+                width: 150px;
+                height: 150px;
+                animation: movement-of-ball-960 2s linear forwards 1s;
+            }
+
+            @include minLayout(1024) {
+                width: 150px;
+                height: 150px;
+                animation: movement-of-ball-1024 2s linear forwards 1s;
+            }
+
+            @include minLayout(1152) {
+                width: 150px;
+                height: 150px;
+                animation: movement-of-ball-1152 2s linear forwards 1s;
+            }
+
+            @include minLayout(1280) {
+                width: 150px;
+                height: 150px;
+                animation: movement-of-ball-1280 2s linear forwards 1s;
+            }
+
+            @include minLayout(1366) {
+                width: 150px;
+                height: 150px;
+                animation: movement-of-ball-1366 2s linear forwards 1s;
+            }
+
+            @include minLayout(1367) {
+                animation: none;
+            }
         }
     }
 
@@ -184,129 +267,181 @@
         overflow-y: hidden;
         left: 29%;
         bottom: 7%;
-        @include minMaxWidth(650,768){
-            left:8%;
+
+        // @include minMaxWidth(493,614){
+        //     left: 65px;
+        //     bottom: 7%;
+        // }
+        @include minMaxWidth(650, 768) {
+            left: 8%;
             gap: 30px;
         }
-        @include minLayout(768){
+
+        @include minLayout(768) {
             gap: 43px;
             left: 20%;
             bottom: 16%;
         }
-        @include minLayout(1024){
+
+        @include minLayout(1024) {
             gap: 65px;
             left: 31%;
             bottom: 11%;
         }
-        @include minLayout(1366){
+
+        @include minLayout(1366) {
             gap: 80px;
             left: 397px;
             bottom: 100px;
         }
-        @include minLayout(1367){
-            left:29%;
-            bottom:7%;
+
+        @include minLayout(1367) {
+            left: 29%;
+            bottom: 7%;
         }
-        @include minMaxWidth(300,450){
-            gap:40px;
+
+        @include minMaxWidth(300, 450) {
+            gap: 40px;
             left: 30px;
-            bottom:11%;
-            flex-wrap: wrap;
-        }
-        @include minMaxWidth(450,650){
-            gap:40px;
-            left: 70px;
-            bottom:12%;
+            bottom: 11%;
             flex-wrap: wrap;
         }
 
-        .performance_area {
+        @include minMaxWidth(450, 650) {
+            // gap:40px;
+            // left: 70px;
+            // bottom:12%;
+            gap: 20px;
+            left: 83px;
+            bottom: 11%;
+            flex-wrap: wrap;
+        }
+
+        @include minMaxWidth(493, 614) {
+            left: 65px;
+            bottom: 7%;
+        }
+
+        @include minMaxWidth(597, 610) {
+            bottom: 9%;
+        }
+        @include minMaxWidth(617,623){
+            bottom: 5%;
+        }
+
+        .performance-area {
             display: flex;
             align-items: center;
             gap: 12px;
             opacity: 0;
             animation: slide-up 200ms linear forwards 2000ms;
-            
+
             .icon {
                 padding-bottom: 23px;
-                .img{
-                    @include minMaxWidth(650,768){
-                        height:25px;
+
+                .img {
+                    @include minMaxWidth(650, 768) {
+                        height: 25px;
                     }
+
                     @include minLayout(768) {
                         height: 27px;
                     }
+
                     @include minLayout(1024) {
                         height: 32px;
                     }
-                    @include minLayout(1366){
+
+                    @include minLayout(1366) {
                         height: 100%;
                     }
-                    @include minMaxWidth(300,650){
+
+                    @include minMaxWidth(300, 650) {
                         height: 27px;
                     }
                 }
             }
-            .icon_reverse{
+
+            .icon-reverse {
                 transform: rotate(-180deg);
                 padding-top: 23px;
+
                 .img {
-                    @include minMaxWidth(650,768){
-                        height:25px;
+                    @include minMaxWidth(650, 768) {
+                        height: 25px;
                     }
+
                     @include minLayout(768) {
                         height: 27px;
                     }
-            
+
                     @include minLayout(1024) {
                         height: 32px;
                     }
-            
+
                     @include minLayout(1366) {
                         height: 100%;
                     }
-                    @include minMaxWidth(300,650){
+
+                    @include minMaxWidth(300, 650) {
                         height: 23px;
                     }
                 }
             }
+
             .content {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
 
                 .counter {
+                    font-family: $GraphikRegular;
+                    font-weight: 300;
                     font-size: 64px;
                     line-height: 70px;
                     color: $Black;
-                    @include minMaxWidth(650,768){
+                    display: flex;
+                    flex-wrap: nowrap;
+                    @include minMaxWidth(650, 768) {
                         font-size: 32px;
                     }
-                    @include minLayout(768){
+
+                    @include minLayout(768) {
                         font-size: 40px;
                     }
-                    @include minLayout(1024){
+
+                    @include minLayout(1024) {
                         font-size: 50px;
                     }
-                    @include minLayout(1366){
+
+                    @include minLayout(1366) {
                         font-size: 64px;
                     }
-                    @include minMaxWidth(300,650){
-                        font-size: 32px;
+
+                    @include minMaxWidth(300, 650) {
+                        // font-size: 32px;
+                        font-size: 24px;
                         line-height: 35px;
                     }
+
                     span:nth-child(2) {
+                        font-family: $GraphikRegular;
+                        font-weight: 300;
                         font-size: 46px;
-                        @include minMaxWidth(650,768){
-                            font-size: 23px ;
+
+                        @include minMaxWidth(650, 768) {
+                            font-size: 23px;
                         }
-                        @include minLayout(768){
+
+                        @include minLayout(768) {
                             font-size: 30px;
                         }
-                        @include minLayout(1024){
+
+                        @include minLayout(1024) {
                             font-size: 46px;
                         }
-                        @include minMaxWidth(300,650){
+
+                        @include minMaxWidth(300, 650) {
                             font-size: 20px;
                             line-height: 22px;
                         }
@@ -314,6 +449,7 @@
                 }
 
                 .name {
+                    font-family: $GraphikRegular;
                     font-weight: 400;
                     font-size: 15px;
                     line-height: 18px;
@@ -321,17 +457,22 @@
                     text-transform: uppercase;
                     color: $Black;
                     white-space: nowrap;
-                    @include minLayout(768){
+
+                    @include minLayout(768) {
                         font-size: 11px;
                     }
+
                     @include minLayout(1024) {
                         font-size: 12px;
                     }
+
                     @include minLayout(1366) {
                         font-size: 16px;
                     }
-                    @include minMaxWidth(300,650){
-                        font-size: 14px;
+
+                    @include minMaxWidth(300, 650) {
+                        // font-size: 14px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -366,7 +507,231 @@
     }
 }
 
-@keyframes movement-of-ball {
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+}
+
+@keyframes movement-of-ball-360 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-10vh);
+    }
+
+    // 25% {
+    //     transform: translateX(25vw) translateY(-11vh);
+    //     opacity: 1;
+    // }
+
+    50% {
+        transform: translateX(40vw) translateY(-13vh);
+        opacity: 1;
+    }
+
+    // 75% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        transform: translateX(calc(100vw - 79px)) translateY(calc(597px - 100vh));
+        opacity: 1;
+    }
+}
+
+@keyframes movement-of-ball-480 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-8vh);
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-9vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(40vw) translateY(-13vh);
+        opacity: 1;
+    }
+
+    // 75% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        transform: translateX(calc(100vw - 100px)) translateY(calc(575px - 100vh));
+        opacity: 1;
+    }
+}
+
+@keyframes movement-of-ball-650 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-7vh);
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-10vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(40vw) translateY(-15vh);
+        opacity: 1;
+    }
+
+    // 75% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(545px - 100vh));
+        opacity: 1;
+    }
+}
+
+
+@keyframes movement-of-ball-768 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-13vh);
+    }
+
+    // 25% {
+    //     transform: translateX(25vw) translateY(-15vh);
+    //     opacity: 1;
+    // }
+
+    50% {
+        transform: translateX(50vw) translateY(-23vh);
+        opacity: 1;
+    }
+
+    // 75% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(500px - 100vh));
+        opacity: 1;
+    }
+}
+
+@keyframes movement-of-ball-848 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-13vh);
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-18vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-21vh);
+        opacity: 1;
+    }
+
+    // 75% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(476px - 100vh));
+        opacity: 1;
+    }
+}
+
+@keyframes movement-of-ball-960 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-13vh);
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-15vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-22vh);
+        opacity: 1;
+    }
+
+    // 75% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(465px - 100vh));
+        opacity: 1;
+    }
+}
+
+@keyframes movement-of-ball-1024 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-10vh);
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-15vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-22vh);
+        opacity: 1;
+    }
+
+    // 75% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(450px - 100vh));
+        opacity: 1;
+    }
+}
+
+@keyframes movement-of-ball-1152 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-6vh);
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(-15vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-22vh);
+        opacity: 1;
+    }
+
+    // 75% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        transform: translateX(calc(100vw - 150px)) translateY(calc(418px - 100vh));
+        opacity: 1;
+    }
+}
+
+
+@keyframes movement-of-ball-1263 {
     0% {
         opacity: 1;
     }
@@ -381,28 +746,14 @@
         opacity: 1;
     }
 
-    75% {
-        transform: translateX();
-        opacity: 1;
-    }
+    // 75% {
+    //     opacity: 1;
+    // }
 
     100% {
-        transform: translateX(calc(100vw - 150px)) translateY(calc(150px - 92vh));
+        transform: translateX(calc(100vw - 126px)) translateY(calc(255px - 100vh));
         opacity: 1;
     }
-}
-
-@keyframes slide-up {
-    0% {
-        transform: translateY(100%);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-
 }
 
 @keyframes movement-of-ball-1280 {
@@ -420,15 +771,16 @@
         opacity: 1;
     }
 
-    75% {
-        opacity: 1;
-    }
+    // 75% {
+    //     opacity: 1;
+    // }
 
     100% {
-        transform: translateX(calc(100vw - 150px)) translateY(calc(150px - 92vh));
+        transform: translateX(calc(100vw - 150px)) translateY(calc(395px - 100vh));
         opacity: 1;
     }
 }
+
 @keyframes movement-of-ball-1366 {
     0% {
         opacity: 1;
@@ -444,12 +796,12 @@
         opacity: 1;
     }
 
-    75% {
-        opacity: 1;
-    }
+    // 75% {
+    //     opacity: 1;
+    // }
 
     100% {
-        transform: translateX(calc(100vw - 150px)) translateY(calc(450px - 100vh));
+        transform: translateX(calc(100vw - 150px)) translateY(calc(375px - 100vh));
         opacity: 1;
     }
 }
