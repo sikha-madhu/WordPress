@@ -28,7 +28,7 @@
       text-align: left;
       letter-spacing: 0.02em;
       color: $White;
-      font-family: "domain";
+      font-family: $GraphikRegular;
       margin: unset;
     }
 
@@ -277,6 +277,10 @@
     .design-approach-cards-section {
       margin-left: 20px;
       margin-right: 20px;
+      .description {
+        padding-left: unset;
+        padding-right: unset;
+      }
       .cards-row {
         padding-top: 40px;
         display: flex;
@@ -308,7 +312,14 @@
           text-align: center;
           padding-top: 35px;
           padding-bottom: 31px;
-          min-height: 104px;
+          min-height: 161px;
+          .mobile-card-img {
+            display: block;
+            margin: auto;
+          }
+          .web-card-img {
+            display: none;
+          }
         }
         .card-body {
           margin-left: unset;
@@ -326,6 +337,17 @@
       }
     }
   }
+
+  @include minMaxWidth(451, 650) {
+    .design-approach-cards-section {
+      margin-left: 30px;
+      margin-right: 30px;
+      .each-card {
+        width: 175px;
+      }
+    }
+ 
+}
 }
 .test-font {
   font-family: $GraphikRegular;

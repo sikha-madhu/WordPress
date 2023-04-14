@@ -70,7 +70,7 @@ body {
 	text-align: left;
 	letter-spacing: 0.02em;
 	color: #ffffff;
-	font-family: "domain";
+	font-family: "GraphikRegular";
 	margin: unset;
 }
 
@@ -339,10 +339,13 @@ h6 {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background: #f5f5f5;
+	background: #f5f5f5; /* .wave4{
+      width:160%;
+      height:160%;
+  } */
 }
 
-.main {
+.designsolution .main {
 	width: 260px;
 	height: 260px;
 	position: absolute;
@@ -351,7 +354,7 @@ h6 {
 	transform: translate(-50%, -50%);
 }
 
-.wave {
+.designsolution .wave {
 	width: 100%;
 	height: 100%;
 	border-radius: 100%;
@@ -364,22 +367,17 @@ h6 {
 	animation: ripple 2.5s 1 cubic-bezier(0.04, 0.65, 0.69, 1.04);
 }
 
-.wave2 {
+.designsolution .wave2 {
 	width: 160%;
 	height: 160%;
 }
 
-.wave3 {
+.designsolution .wave3 {
 	width: 210%;
 	height: 210%;
 }
 
-/* .wave4{
-    width:160%;
-    height:160%;
-} */
-
-.content {
+.designsolution .content {
 	width: 100%;
 	height: 100%;
 	max-width: 580px;
@@ -393,7 +391,7 @@ h6 {
 	opacity: 0;
 }
 
-.tittle {
+.designsolution .tittle {
 	display: flex;
 	padding-bottom: 40px;
 	justify-content: center;
@@ -405,14 +403,14 @@ h6 {
 	letter-spacing: 0.01em;
 }
 
-.subTittle {
+.designsolution .subTittle {
 	padding-bottom: 20px;
 	font-weight: 300;
 	font-size: 30px;
 	line-height: 38px;
 }
 
-.description {
+.designsolution .description {
 	font-size: 20px;
 	max-width: 634px;
 	font-style: normal;
@@ -423,7 +421,7 @@ h6 {
 	letter-spacing: 0.02em;
 }
 
-.cointainer {
+.designsolution .cointainer {
 	display: flex;
 	width: 100%;
 	height: 100%;
@@ -866,18 +864,18 @@ h6 {
 	height: 85vh;
 }
 
-.main {
+.designsolution .main {
 	width: 120px;
 	height: 120px;
 	left: 66%;
 	top: 38%;
 }
 
-.content {
+.designsolution .content {
 	top: 0;
 }
 
-.tittle {
+.designsolution .tittle {
 	padding-top: 103px;
 	font-weight: 300;
 	font-size: 32px;
@@ -888,7 +886,7 @@ h6 {
 	padding-bottom: 0;
 }
 
-.subTittle {
+.designsolution .subTittle {
 	padding-bottom: 121px;
 	font-style: normal;
 	font-weight: 300;
@@ -896,7 +894,7 @@ h6 {
 	line-height: 24px;
 }
 
-.description {
+.designsolution .description {
 	font-style: normal;
 	font-weight: 300;
 	font-size: 14px;
@@ -1064,6 +1062,11 @@ h6 {
 	margin-right: 20px;
 }
 
+.design-approach-cards-wrapper .design-approach-cards-section .description {
+	padding-left: unset;
+	padding-right: unset;
+}
+
 .design-approach-cards-wrapper .design-approach-cards-section .cards-row {
 	padding-top: 40px;
 	display: flex;
@@ -1097,7 +1100,16 @@ h6 {
 	text-align: center;
 	padding-top: 35px;
 	padding-bottom: 31px;
-	min-height: 104px;
+	min-height: 161px;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card .card-img .mobile-card-img {
+	display: block;
+	margin: auto;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card .card-img .web-card-img {
+	display: none;
 }
 
 .design-approach-cards-wrapper .design-approach-cards-section .each-card .card-body {
@@ -1212,6 +1224,19 @@ h6 {
 	left: 70px;
 	bottom: 12%;
 	flex-wrap: wrap;
+}
+
+}
+
+@media (min-width: 451px) and (max-width: 650px) {
+
+.design-approach-cards-wrapper .design-approach-cards-section {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.design-approach-cards-wrapper .design-approach-cards-section .each-card {
+	width: 175px;
 }
 
 }
@@ -1341,19 +1366,19 @@ h6 {
 	left: 78%;
 }
 
-.main {
+.designsolution .main {
 	left: 68%;
 }
 
-.tittle {
+.designsolution .tittle {
 	font-size: 48px;
 }
 
-.subTittle {
+.designsolution .subTittle {
 	font-size: 21px;
 }
 
-.description {
+.designsolution .description {
 	font-size: 14px;
 }
 
@@ -1373,7 +1398,7 @@ h6 {
 
 @media (min-width: 650px) and (max-width: 1400px) {
 
-.content {
+.designsolution .content {
 	justify-content: center;
 }
 
@@ -1565,15 +1590,15 @@ h6 {
 	left: 77%;
 }
 
-.tittle {
+.designsolution .tittle {
 	font-size: 52px;
 }
 
-.subTittle {
+.designsolution .subTittle {
 	font-size: 24px;
 }
 
-.description {
+.designsolution .description {
 	font-size: 16px;
 }
 
@@ -1641,15 +1666,15 @@ h6 {
 	left: 70%;
 }
 
-.tittle {
+.designsolution .tittle {
 	font-size: 60px;
 }
 
-.subTittle {
+.designsolution .subTittle {
 	font-size: 27px;
 }
 
-.description {
+.designsolution .description {
 	font-size: 18px;
 }
 

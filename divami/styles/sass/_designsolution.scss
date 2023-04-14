@@ -8,7 +8,7 @@
     @include minMaxWidth(300,650){
       height: 85vh;
     }
-}
+
 .main {
     width: 260px;
     height: 260px;
@@ -188,3 +188,5 @@ line-height: 24px;
       height: 100%;
       justify-content: center;
   }
+
+}
