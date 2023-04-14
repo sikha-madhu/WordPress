@@ -42,7 +42,7 @@
                         <div class="performances">
             <div class="performance_area">
                 <div class="icon">
-                    <img class="img" src="svg/arrow_up.svg" alt="arrow up icon"/>
+                    <img class="img" src="<?php echo get_template_directory_uri(); ?>/images/svg/arrow_up.svg" alt="arrow up icon"/>
                 </div>
                 <div class="content">
                     <div class="counter" data-target="151">
@@ -54,7 +54,7 @@
             </div>
             <div class="performance_area">
                 <div class="icon">
-                    <img class="img" src="svg/arrow_up.svg" alt="arrow up icon"/>
+                    <img class="img" src="<?php echo get_template_directory_uri(); ?>/images/svg/arrow_up.svg" alt="arrow up icon"/>
                 </div>
                 <div class="content">
                     <div class="counter" data-target="21">
@@ -66,7 +66,7 @@
             </div>
             <div class="performance_area">
                 <div class="icon">
-                    <img class="img" src="svg/arrow_up.svg" alt="arrow up icon"/>
+                    <img class="img" src="<?php echo get_template_directory_uri(); ?>/images/svg/arrow_up.svg" alt="arrow up icon"/>
                 </div>
                 <div class="content">
                     <div class="counter" data-target="112">
@@ -78,7 +78,7 @@
             </div>
             <div class="performance_area">
                 <div class="icon_reverse">
-                    <img class="img" src="svg/arrow_up.svg" alt="arrow up icon"/>
+                    <img class="img" src="<?php echo get_template_directory_uri(); ?>/images/svg/arrow_up.svg" alt="arrow up icon"/>
                 </div>
                 <div class="content">
                     <div class="counter" data-target="97">

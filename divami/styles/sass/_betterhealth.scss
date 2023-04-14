@@ -1,69 +1,124 @@
 
-.health_care_wrapper{
+.health-care-wrapper{
     padding-top: 115px;
     background-color: $Grey;
     padding-bottom: 130px; 
+    display: flex;
     @include minMaxWidth(300,650){
         padding-top: 0px;
+
     }
-    .health_card_wrapper {
-        width: 72%;
-        margin-top: 36px;
+    @include minMaxWidth(300,800){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .health-card-wrapper {
+        
+        margin-top: 60px;
         margin-left: 100px;
-        .health_care_card {
+        .health-care-card {
             padding-top: 75px;
             padding-bottom: 80px;
+            width: 494px;
+            height: 541px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+              @include minMaxWidth(770, 1024) {
+                  width: 405px;
+                  padding-top: 35px;
+            padding-bottom: 40px;
+                }
+                @include minMaxWidth(650, 770) {
+                 width: 380px;
+                 padding-top: 60px;
+            padding-bottom: 65px;
+                }
+                @include minMaxWidth(300,650){
+                  width: 320px;
+                  height: 338px;
+                  padding-top: 55px;
+                  padding-bottom: 30px;
+                }
+          
+
         }
-        .health_care_image {
+        .health-care-image {
             text-align: center;
             .logo{
                 height: 106px;
                 width: 125px;
+                @include minMaxWidth(650, 1168) {
+                    height: 86px;
+                width: 105px;
+                   }
+                   @include minMaxWidth(300,650){
+                    height: 63px;
+                width: 75px;
+                }
             }
         }
-        .card_title {
+        .card-title {
             font-family: $GraphikNormal;
             font-size: 30px;
             line-height: 38px;
             letter-spacing: 0.16px;
             color: $Black;
+            // width: 384px;
             text-align: center;
             margin-top: 70px;
+            @include minMaxWidth(300,650){
+                line-height: 26px;
+                font-size: 20px;
+            }
+            
         }
         
-        .card_description {
+        .card-description {
             font-family: $GraphikNormal;
             font-size: 20px;
             line-height: 38px;
             letter-spacing: 0.16px;
             color: $Black;
-            text-align: center;
+            // width: 376px;
+            text-align: left;
             margin-top: 20px;
-            padding-left: 55px;
-            padding-right: 63px;
-        }
-        // @include layout(1280) {
-        //        .card_title {
-        //            font-size: 24px;
-        //            line-height: 32px;
-        //            letter-spacing: 0.16px;
-        //            margin-top: 59px;
-        //        }
-        //        .card_description{
-        //            font-size: 19px;
-        //            margin-top: 16px;
-        //        }
-        //     }
+            margin-left: 55px;
+            margin-right: 63px;
+            @include minMaxWidth(300,650){
+                margin-left: 20px;
+                margin-right: 22px;
+                line-height: 26px;
+                font-size: 14px;
+                margin-top: 10px;
+                width: 278px;
+                height: 127px;
+            }
         }
     
-    .health_care_details {
-        margin-left: 70px;
-        margin-right: 70px;
+        }
+    
+    .health-care-details {
+        margin-left: 104px;
+        margin-right: 109px;
+        @include minMaxWidth(300,650){
+            margin-left: 20px;
+            margin-right: 20px;
+        }
         .title {
             font-size: 20px;
             line-height: 24px;
             letter-spacing: 0.16px;
             font-family: $GraphikMedium;
+            @include minMaxWidth(300,650){
+                
+                font-size: 16px;
+              
+            }
+           
         }
         
         .description {
@@ -75,6 +130,12 @@
             margin-top: 10px;
             margin-bottom: 30px;
             font-weight: 300;
+            @include minMaxWidth(300,650){
+                margin-top: 6px;
+                font-size: 14px;
+                line-height: 26px;
+            }
+
         }
 
         @include layout(1280) {
@@ -97,37 +158,32 @@
     }
     
     @include layout(1200) {
-        .health_card_wrapper {
+        .health-card-wrapper {
             margin-top: 36px;
             margin-left: 100px;
         }
         @include layout(992) {
-            .health_card_wrapper {
+            .health-card-wrapper {
                 margin-top: 36px;
                 margin-bottom: 64px;
                 margin-left: 100px;
             }
-        
-            .health_care_details {
-                margin-left: 70px;
-                margin-right: 70px;
-            }
             @include layout(900) {
-                .health_card_wrapper {
-                    margin: 0 auto 20px;
+                .health-card-wrapper {
+                    margin:  20px;
                 }
                 @include layout(768) {
-                    .health_card_wrapper{ 
-                        .health_care_card{
-                            .health_care_image{
-                                .logo{
-                                    height: 80px;
-                                }
-                            }
-                            .card_title{
+                    .health-card-wrapper{ 
+                        .health-care-card{
+                            // .health-care-image{
+                            //     // .logo{
+                            //     //     height: 80px;
+                            //     // }
+                            // }
+                            .card-title{
                                 margin-top: 30px;
                             }
-                            .card_description{
+                            .card-description{
                                 font-size: 16px;
                             }
                         }
@@ -138,20 +194,20 @@
     }
     
     // @include layout(992) {
-    //     .health_card_wrapper {
+    //     .health-card-wrapper {
     //         margin-top: 36px;
     //         margin-bottom: 64px;
     //         margin-left: 100px;
     //     }
     
-    //     .health_care_details {
+    //     .health-care-details {
     //         margin-left: 70px;
     //         margin-right: 70px;
     //     }
     // }
     
     // @include layout(900) {
-    //     .health_card_wrapper {
+    //     .health-card-wrapper {
     //         margin-left: 70px;
     //         margin-right: 70px;
     //         width: auto;
@@ -160,19 +216,19 @@
 }
 
 
-@include layout(1280) {
-    .health_care_wrapper {
-        .health_card_wrapper {
-            .card_title {
-                font-size: 24px;
-                line-height: 32px;
-                letter-spacing: 0.16px;
-                margin-top: 59px;
-            }
-            .card_description{
-                font-size: 19px;
-                margin-top: 16px;
-            }
-        }
-    }
-}
+// @include layout(1280) {
+//     .health-care-wrapper {
+//         .health-card-wrapper {
+//             .card-title {
+//                 font-size: 24px;
+//                 line-height: 32px;
+//                 letter-spacing: 0.16px;
+//                 margin-top: 59px;
+//             }
+//             .card-description{
+//                 font-size: 19px;
+//                 margin-top: 16px;
+//             }
+//         }
+//     }
+// }
