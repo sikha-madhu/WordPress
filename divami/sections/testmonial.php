@@ -31,8 +31,7 @@
                                     <p class="description-content"><?php  echo get_field('testmonial-content') ?> </p>
                                 </div>
                                 <div class="mob-client-image">
-                                    <img src="<?php echo get_template_directory_uri(); ?>
-                                    /styles/images/mobile_user_Icon.png" alt="profile" />
+                                    <img src="<?php  echo get_field('testmonial-client-image-mobile')?>" alt="profile" />
                                 </div>
                                 <div class="client-name">
                                     <span><?php  echo get_field('testmonial-client-name') ?> </span>
@@ -43,8 +42,7 @@
                                 </div>
                             </div>
                             <div >
-                                <img class="card-image" src="<?php  echo get_field('testmonial-client-image')?>" 
-                                alt="profile"/>
+                                <img class="card-image" src="<?php  echo get_field('testmonial-client-image')?>" alt=" web profile"/>
                             </div>
                         </div>
                     </div> 

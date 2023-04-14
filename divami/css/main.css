@@ -445,7 +445,7 @@ h6 {
 .testimonial .dots-background {
 	width: 100%;
 	min-height: 90vh;
-	background-image: url("../images/dots_background.svg");
+	background-image: url("./images/dots_background.svg");
 	background-position: center;
 	background-size: 100%;
 }
@@ -546,6 +546,7 @@ h6 {
 
 .testimonial .dots-background .container .card .card-image {
 	height: 100%;
+	mix-blend-mode: luminosity;
 }
 
 .mob-client-image {
@@ -1425,6 +1426,32 @@ h6 {
 
 }
 
+@media (min-width: 651px) and (max-width: 774px) {
+
+.testimonial .dots-background .container {
+	padding-bottom: 90px;
+}
+
+.testimonial .dots-background .container .quote {
+	left: 40px;
+}
+
+.testimonial .dots-background .container .card .card-content {
+	padding-left: 40px;
+	padding-top: 40px;
+}
+
+.testimonial .dots-background .container .card .card-content .card-description {
+	padding-bottom: 30px;
+}
+
+.testimonial .dots-background .container .card .card-content .card-description .description-content {
+	font-size: 18px;
+	line-height: 35px;
+}
+
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
 
 .testimonial .dots-background .title .h2-tag {
@@ -1543,13 +1570,17 @@ h6 {
 
 @media (min-width: 774px) and (max-width: 1024px) {
 
+.testimonial .dots-background .container .card .card-content .client-name {
+	font-size: 13px;
+}
+
+}
+
+@media (min-width: 775px) and (max-width: 1024px) {
+
 .testimonial .dots-background .container .card .card-content .card-description .description-content {
 	font-size: 23px;
 	line-height: 35px;
-}
-
-.testimonial .dots-background .container .card .card-content .client-name {
-	font-size: 13px;
 }
 
 }
@@ -2382,14 +2413,6 @@ h2.section_title {
 
 .design-approach-section-wrapper .design-approach-section .cards-row {
 	margin-top: 40px;
-}
-
-}
-
-@media screen and (max-width: 600px) {
-
-.testimonial .dots-background .title .h2-tag {
-	font-size: 32px;
 }
 
 }

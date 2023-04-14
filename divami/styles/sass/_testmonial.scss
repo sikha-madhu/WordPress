@@ -6,7 +6,7 @@
     .dots-background {
         width: 100%;
         min-height: 90vh;
-        background-image: url("../images/dots_background.svg");
+        background-image: url("./images/dots_background.svg");
         background-position: center;
         background-size: 100%;
 
@@ -27,10 +27,6 @@
                 color: $Black;
 
                 @include layout(649) {
-                    font-size: 32px;
-                }
-
-                @media screen and (max-width: 600px){
                     font-size: 32px;
                 }
 
@@ -71,12 +67,19 @@
                 width: 100%;
             }
 
+            @include minMaxWidth(651,774){
+                padding-bottom: 90px;
+            }
+
             .quote {
                 position: absolute;
                 left: 70px;
                 top: -35px;
                 @include layout(650) {
                     display: none;
+                }
+                @include minMaxWidth(651,774){
+                    left: 40px;
                 }
 
                 .quote-icon {
@@ -126,7 +129,10 @@
                         padding-right: 20px;
                         padding-bottom: 30px;
                     }
-
+                    @include minMaxWidth(651,774){
+                        padding-left: 40px;
+                        padding-top: 40px;
+                    }
                     .card-description {
                         max-width: 623px;
                         padding-bottom: 40px;
@@ -134,7 +140,9 @@
                         @include layout(650) {
                             padding-bottom: 30px;
                         }
-
+                        @include minMaxWidth(651,774){
+                            padding-bottom: 30px;
+                        }
                         .description-content {
                             font-family: $DomineRegular;
                             font-weight: 400;
@@ -147,20 +155,20 @@
                                 line-height: 30px;
                             }
 
-                            // @include minMaxWidth(650, 768) {
-                            //     font-size: 14px;
-                            //     line-height: 28px;
-                            // }
+                            @include minMaxWidth(651, 774) {
+                                font-size: 18px;
+                                line-height: 35px;
+                            }
 
-                            @include minMaxWidth(774, 1024) {
+                            @include minMaxWidth(775, 1024) {
                                 font-size: 23px;
                                 line-height: 35px;
                             }
 
-                            @include minMaxWidth(1024, 1306) {
-                                // font-size: 24px;
-                                // line-height: 40px;
-                            }
+                            // @include minMaxWidth(1024, 1306) {
+                            //     font-size: 24px;
+                            //     line-height: 40px;
+                            // }
                         }
                     }
 
@@ -242,7 +250,7 @@
 
                 .card-image {
                     height: 100%;
-
+                    mix-blend-mode: luminosity;
                     @include layout(650) {
                         display: none;
                     }
