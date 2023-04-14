@@ -15,3 +15,21 @@
     @content;
   }
 }
+
+@mixin maxHeight($max) {
+  @media (max-height: #{$max}px) {
+    @content;
+  }
+}
+
+@mixin minHeight($min) {
+  @media (min-height: #{$min}px) {
+    @content;
+  }
+}
+
+@mixin minMaxHeight($min, $max) {
+  @media (min-height: #{$min}px) and (max-height: #{$max}px) {
+    @content;
+  }
+}
